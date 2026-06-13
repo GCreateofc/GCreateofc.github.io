@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCreate - Criação de Sites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="cursor"></div>
+
+    <div id="loading">
+        <div class="loading-conteudo">
+            <img src="Logo.jpg" alt="GCreate" class="loading-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="Logo.jpg" alt="GCreate">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Seu negócio merece um site profissional</h2>
+            <p>Criamos sites modernos e funcionais para impulsionar seu negócio</p>
+            <a id="abrir-modal" class="btn">Solicitar Orçamento</a>
+        </section>
+
+        <section class="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+
+                <div class="card-servico">
+                    <h3>Landing Page</h3>
+                    <p>Página focada em conversão para divulgar um produto ou serviço.</p>
+                </div>
+
+                <div class="card-servico">
+                    <h3>Site para Portifólio</h3>
+                    <p>Mostre seu trabalho de forma profissional e conquiste mais clientes.</p>
+                </div>
+
+                <div class="card-servico">
+                    <h3>Site Institucional</h3>
+                    <p>Apresente sua empresa com credibilidade e gere mais contatos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="diferenciais">
+            <h2>Por que escolher a GCreate?</h2>
+            <div class="diferenciais-grid">
+
+                <div class="card-diferencial">
+                    <span class="ícone">⚡</span>
+                    <h3>Entrega Rápida</h3>
+                    <p>Seu site pronto no prazo combinado, sem enrolação.</p>
+                </div>
+
+                <div class="card-diferencial">
+                    <span class="ícone">📱</span>
+                    <h3>Site Responsivo</h3>
+                    <p>Funciona perfeitamente em celular, tablet e computador.</p>
+                </div>
+
+                <div class="card-diferencial">
+                    <span class="ícone">🛠️</span>
+                    <h3>Suporte após Entrega</h3>
+                    <p>Não te abandonamos depois de entregar. Estamos aqui se precisar.</p>
+                </div>
+
+                <div class="card-diferencial">
+                    <span class="ícone">🎨</span>
+                    <h3>Design Moderno</h3>
+                    <p>Sites com visual atual, limpo e que passam credibilidade.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GCreate. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <h3>Solicitação de Orçamento</h3>
+
+            <form id="form-orcamento">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+
+                <select id="tipo-servico" required>
+                    <option value="" disabled selected>Tipo de site</option>
+                    <option value="Landing Page">Landing Page</option>
+                    <option value="Site Institucional">Site Institucional</option>
+                    <option value="Site para Portfólio">Site para Portfólio</option>
+                </select>
+
+                <textarea id="descricao" placeholder="Descreva seu projeto" rows="3"></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            
+            <button id="modal-fechar" class="modal-fechar">Cancelar</button>
+        </div>
+    </div>
+
+    <div class="avatar-box">
+        <div class="speech" id="speech"></div>
+
+            <img src="avatar.png" alt="GCreate Avatar" class="avatar">
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

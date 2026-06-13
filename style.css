@@ -1,0 +1,612 @@
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+* {
+    cursor: url(cursor-seta.svg) 2 2, auto;
+}
+
+a:hover ~ #cursor,
+.btn:hover ~ #cursor {
+    background-color: var(--azul);
+    transform: translate(-50%, -50%) scale(1.5);
+
+}
+
+:root {
+    --preto: #0a0a0a;
+    --azul: #3b82f6;
+    --branco: #ffffff;
+    --cinza: #e5e5e5;
+    --cinza-escuro: #1a1a1a;
+}
+
+body {
+    background-color: var(--preto); /* Set background color to black */
+    color: var(--branco); /* Set text color to white */
+    font-family: 'Segoe UI', sans-serif; /* Use a clean, modern font */
+}
+
+header {
+    display: flex; /* Usa flexbox para layout */
+    justify-content: space-between; /* Separa os itens para as extremidades */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 20px 60px; /* Adiciona espaçamento interno */
+    background-color: var(--cinza-escuro); /* Cor de fundo do header */
+    position: sticky; /* Mantém o header fixo no topo */
+    top: 0; /* Posiciona o header no topo da página */
+    z-index: 100; /* Garante que o header fique acima de outros elementos */
+}
+
+.logo img {
+    height: 100px; /* Define a altura da logo */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Usa flexbox para layout horizontal */
+    gap: 30px; /* Adiciona espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: var(--branco); /* Define a cor dos links do menu */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Define o tamanho da fonte dos links do menu */
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor dos links */
+}
+
+
+nav ul li a.ativo {
+    color: var(--azul);
+    border-bottom: 2px solid var(--azul);
+    padding-bottom: 4px;
+}
+
+nav ul li a:hover {
+    color: var(--azul); /* Altera a cor dos links do menu ao passar o mouse */
+}
+
+#hero {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 90vh; /* Define a altura do hero para ocupar a maior parte da tela */
+    padding: 0 20px; /* Adiciona espaçamento interno horizontal */
+}
+
+#hero h2 {
+    font-size: 48px; /* Define o tamanho da fonte do título do hero */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título do hero */
+    color: var(--branco); /* Define a cor do título do hero */
+}
+
+#hero p {
+    font-size: 20px; /* Define o tamanho da fonte do parágrafo do hero */
+    color: var(--cinza); /* Define a cor do parágrafo do hero */
+    margin-bottom: 40px; /* Adiciona espaçamento abaixo do parágrafo do hero */
+}
+
+.btn {
+    background-color: var(--azul); /* Define a cor de fundo do botão */
+    color: var(--branco); /* Define a cor do texto do botão */
+    padding: 14px 32px; /* Adiciona espaçamento interno ao botão */
+    text-decoration: none; /* Remove o sublinhado do botão */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo do botão */
+}
+
+.btn:hover {
+    background-color: #2563eb; /* Altera a cor de fundo do botão ao passar o mouse */
+}
+
+section {
+    padding: 80px 60px; /* Adiciona espaçamento interno às seções */
+}
+
+section h2 {
+    font-size: 36px; /* Define o tamanho da fonte do título da seção */
+    text-align: center; /* Alinha o título da seção ao centro */
+    margin-bottom: 50px; /* Adiciona espaçamento abaixo do título da seção */
+    color: var(--branco); /* Define a cor do título da seção */
+}
+
+.cards {
+    display: flex;  /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 30px; /* Adiciona espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
+}
+
+.card {
+    background-color: var(--cinza-escuro); /* Define a cor de fundo dos cards */
+    border-radius: 12px; /* Adiciona bordas arredondadas ao card */
+    padding: 30px; /* Adiciona espaçamento interno ao card */
+    width: 280px; /* Define a largura do card */
+    transition: transform 0.3s, border 0.3s, box-shadow 0.3s; /* Adiciona uma transição suave para a transformação do card */
+    border: 2px solid transparent;
+
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Move o card para cima ao passar o mouse */
+    border: 2px solid var(--azul);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.card h3 {
+    font-size: 22px; /* Define o tamanho da fonte do título do card */
+    color: var(--azul); /* Define a cor do título do card */
+    margin-bottom: 12px; /* Adiciona espaçamento abaixo do título do card */
+}
+
+.card p {
+    font-size: 15px; /* Define o tamanho da fonte do parágrafo do card */
+    color: var(--cinza); /* Define a cor do parágrafo do card */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas do parágrafo do card */
+}
+
+.card img {
+    width: 100%; /* Define a largura da imagem do card para ocupar toda a largura do card */
+    border-radius: 8px; /* Adiciona bordas arredondadas à imagem do card */
+    margin-bottom: 16px; /* Adiciona espaçamento abaixo da imagem do card */
+}
+
+#contato {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    gap: 30px; /* Adiciona espaçamento entre os elementos do contato */
+}
+
+#sobre {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    gap: 30px; /* Adiciona espaçamento entre os elementos do sobre */
+}
+
+#sobre p {
+    max-width: 600px; /* Define a largura máxima do parágrafo do sobre para melhorar a legibilidade */
+    color: var(--cinza); /* Define a cor do parágrafo do sobre */
+    font-size: 18px; /* Define o tamanho da fonte do parágrafo do sobre */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas do parágrafo do sobre */
+}
+
+footer {
+    background-color: var(--cinza-escuro);
+    text-align: center;
+    padding: 20px;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+.preco {
+    margin-top: 16px; /* Adiciona espaçamento acima da seção de preços */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os preços em coluna */
+    gap: 6px; /* Adiciona espaçamento entre os preços */
+}
+
+.preco-gcreate {
+    color: var(--azul); /* Define a cor do preço do GCreate */
+    font-weight: bold; /* Deixa o preço do GCreate em negrito */
+    font-size: 15px; /* Define o tamanho da fonte do preço do GCreate */
+}
+
+.preco-mercado {
+    color: #888; /* Define a cor do preço do mercado */
+    font-size: 13px; /* Define o tamanho da fonte do preço do mercado */
+    text-decoration: line-through; /* Adiciona um risco no preço do mercado para indicar que é mais caro */
+}
+
+#nao-encontrado {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    height: 70vh; /* Define a altura para ocupar a maior parte da tela */
+    gap: 20px; /* Adiciona espaçamento entre os elementos */
+}
+
+#nao-encontrado h2 {
+    font-size: 120px; /* Define o tamanho da fonte do título do 404 */
+    line-height: 1; /* Reduz o espaçamento entre as linhas do título do 404 */
+    color: var(--azul); /* Define a cor do título do 404 */
+}
+
+#nao-encontrado p {
+    font-size: 20px; /* Define o tamanho da fonte do parágrafo do 404 */
+    color: var(--cinza); /* Define a cor do parágrafo do 404 */
+}
+
+.card .btn {
+    display: inline-block; /* Garante que o botão seja tratado como um elemento de bloco para aplicar margens corretamente */
+    margin-top: 16px; /* Adiciona espaçamento acima do botão */
+    font-size: 14px; /* Define o tamanho da fonte do botão dentro do card */
+    padding: 10px 20px; /* Ajusta o espaçamento interno do botão dentro do card */
+}
+
+.card, #hero h2, #hero p, #sobre p, #contato p {
+    opacity: 0; /* Inicialmente, os elementos estão invisíveis */
+    transform: translateY(30px); /* Move os elementos para baixo para o efeito de animação */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Adiciona uma transição suave para a opacidade e transformação */
+}
+
+.visivel {
+    opacity: 1 !important; /* Torna os elementos visíveis */
+    transform: translateY(0) !important; /* Move os elementos para a posição original */
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px; /* Reduz o espaçamento interno do header em telas menores */
+    }
+
+    .logo img {
+        height: 60px; /* Reduz a altura da logo em telas menores */
+    }
+
+    nav ul {
+        gap: 15px; /* Reduz o espaçamento entre os itens do menu em telas menores */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Reduz o tamanho da fonte dos links do menu em telas menores */
+    }
+
+    #hero h2 {
+        font-size: 30px; /* Reduz o tamanho da fonte do título do hero em telas menores */
+    }
+
+    #hero p {
+        font-size: 16px; /* Reduz o tamanho da fonte do parágrafo do hero em telas menores */
+    }
+
+    section {
+        padding: 60px 20px; /* Reduz o espaçamento interno das seções em telas menores */
+    }
+
+    .cards {
+        flex-direction: column; /* Organiza os cards em coluna em telas menores */
+        align-items: center; /* Centraliza os cards em telas menores */
+    }
+
+    .card {
+        width: 100%; /* Define a largura do card para ocupar toda a largura disponível em telas menores */
+        max-width: 400px; /* Define uma largura máxima para os cards em telas menores */
+    }    
+}
+
+.modal {
+        display: none; /* Esconde o modal em telas menores */
+        position: fixed; /* Mantém o modal fixo na tela */
+        top: 0; /* Posiciona o modal no topo da tela */
+        left: 0; /* Posiciona o modal na esquerda da tela */
+        width: 100%; /* Define a largura do modal para ocupar toda a tela */
+        height: 100%; /* Define a altura do modal para ocupar toda a tela */
+        background-color: rgba(0, 0, 0, 0.7); /* Adiciona um fundo semitransparente para o modal */
+        z-index: 999; /* Garante que o modal fique acima de outros elementos */
+        justify-content: center; /* Centraliza o conteúdo do modal horizontalmente */
+        align-items: center; /* Centraliza o conteúdo do modal verticalmente */
+    }
+
+    .modal.ativo {
+        display: flex; /* Exibe o modal como um flex container quando ativo */
+    }
+
+    .modal-conteudo {
+        background-color: var(--cinza-escuro); /* Define a cor de fundo do conteúdo do modal */
+        border-radius: 12px; /* Adiciona bordas arredondadas ao conteúdo do modal */
+        padding: 40px; /* Adiciona espaçamento interno ao conteúdo do modal */
+        text-align: center; /* Alinha o texto do conteúdo do modal ao centro */
+        max-width: 400px; /* Define uma largura máxima para o conteúdo do modal em telas menores */
+        width: 90%;  /* Define a largura do conteúdo do modal para ocupar a maior parte da tela em telas menores */
+    }
+
+    .modal-conteudo h3 {
+        font-size: 22px; /* Define o tamanho da fonte do título do conteúdo do modal em telas menores */
+        margin-bottom: 30px; /* Adiciona espaçamento abaixo do título do conteúdo do modal em telas menores */
+        color: var(--branco) /* Define a cor do título do conteúdo do modal em telas menores */
+    }
+
+    .modal-opcoes {
+        display: flex; /* Usa flexbox para layout das opções do modal */
+        flex-direction: column; /* Organiza as opções do modal em coluna em telas menores */
+        gap: 12px; /* Adiciona espaçamento entre as opções do modal em telas menores */
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo das opções do modal em telas menores */
+    }
+
+    .modal-btn {
+        background-color: var(--preto); /* Define a cor de fundo dos botões do modal em telas menores */
+        color: var(--branco); /* Define a cor do texto dos botões do modal em telas menores */
+        padding: 12px; /* Adiciona espaçamento interno aos botões do modal em telas menores */
+        border: 2px solid var(--azul); /* Adiciona uma borda azul aos botões do modal em telas menores */
+        border-radius: 8px; /* Adiciona bordas arredondadas aos botões do modal em telas menores */
+        font-size: 15px; /* Define o tamanho da fonte dos botões do modal em telas menores */
+        cursor: pointer; /* Altera o cursor para indicar que os botões do modal são clicáveis em telas menores */
+        transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo dos botões do modal em telas menores */
+    }
+
+    .modal-btn:hover {
+        background-color: var(--azul); /* Altera a cor de fundo dos botões do modal ao passar o mouse em telas menores */
+    }
+
+    .modal-fechar {
+        background: none; /* Remove o fundo do botão de fechar do modal em telas menores */
+        border: none; /* Remove a borda do botão de fechar do modal em telas menores */
+        color: #888; /* Define a cor do texto do botão de fechar do modal em telas menores */
+        font-size: 14px; /* Define o tamanho da fonte do botão de fechar do modal em telas menores */
+        cursor: pointer; /* Altera o cursor para indicar que o botão de fechar do modal é clicável em telas menores */
+        margin-top: 10px; /* Adiciona espaçamento acima do botão de fechar do modal em telas menores */
+    }
+
+    .modal-fechar:hover {
+        color: var(--branco); /* Altera a cor do texto do botão de fechar do modal ao passar o mouse em telas menores */
+    }
+
+    .faq-lista {
+        max-width: 700px; /* Define a largura máxima da lista de FAQ para melhorar a legibilidade em telas menores */
+        margin: 0 auto; /* Centraliza a lista de FAQ horizontalmente em telas menores */
+        display: flex; /* Usa flexbox para layout da lista de FAQ */
+        flex-direction: column; /* Organiza os itens da lista de FAQ em coluna em telas menores */
+        gap: 16px; /* Adiciona espaçamento entre os itens da lista de FAQ em telas menores */
+    }
+
+    .faq-item {
+        background-color: var(--cinza-escuro); /* Define a cor de fundo dos itens da lista de FAQ em telas menores */
+        border-radius: 12px; /* Adiciona bordas arredondadas aos itens da lista de FAQ em telas menores */
+        overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites dos itens da lista de FAQ em telas menores */
+    }
+
+    .faq-pergunta {
+        width: 100%; /* Define a largura da pergunta da FAQ para ocupar toda a largura do item da lista de FAQ em telas menores */
+        background: none; /* Remove o fundo do botão da pergunta da FAQ em telas menores */
+        border: none; /* Remove a borda do botão da pergunta da FAQ em telas menores */
+        color: var(--branco); /* Define a cor do texto da pergunta da FAQ em telas menores */
+        text-align: left; /* Alinha o texto da pergunta da FAQ à esquerda em telas menores */
+        padding: 20px; /* Adiciona espaçamento interno à pergunta da FAQ em telas menores */
+        font-size: 17px; /* Define o tamanho da fonte da pergunta da FAQ em telas menores */
+        cursor: pointer; /* Altera o cursor para indicar que a pergunta da FAQ é clicável em telas menores */
+        font-weight: bold; /* Deixa a pergunta da FAQ em negrito em telas menores */
+    }
+
+    .faq-resposta {
+        max-height: 0; /* Define a altura máxima da resposta da FAQ para 0 para escondê-la em telas menores */
+        overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites da resposta da FAQ em telas menores */
+        transition: max-height 0.3s ease; /* Adiciona uma transição suave para a altura máxima da resposta da FAQ em telas menores */
+        padding: 0 20px; /* Adiciona espaçamento interno horizontal à resposta da FAQ em telas menores */;
+    }
+
+    .faq-resposta p {
+        color: var(--cinza); /* Define a cor do texto da resposta da FAQ em telas menores */
+        font-size: 15px; /* Define o tamanho da fonte da resposta da FAQ em telas menores */
+        line-height: 1.6; /* Aumenta o espaçamento entre as linhas da resposta da FAQ em telas menores */
+        padding-bottom: 16px; /* Adiciona espaçamento abaixo do parágrafo da resposta da FAQ em telas menores */;
+    }
+
+    .faq-item.aberto .faq-resposta {
+        max-height: 500px; /* Define uma altura máxima para a resposta da FAQ quando o item da lista de FAQ estiver aberto em telas menores */
+    }
+
+    .servicos {
+        padding: 80px 40px; /* Espaço vertical e horizontal da seção */
+        text-align: center; /* Centraliza tudo*/
+    }
+
+    .servicos h2 {
+        font-size: 2rem; /* Tamanho do título*/
+        margin-bottom: 40px; /* Espaço entre o título e os cards*/
+        color: var(--branco); 
+    }
+
+    .servicos-grid {
+        display: flex;
+        justify-content: center; /* Centraliza os cards horizontalmente */
+        gap: 24px; /* Espaço entre os cards */
+        flex-wrap: wrap; /* Quebra linha em telas menores */ 
+    }
+
+    .card-servico{
+        background-color: var(--preto); /* Fundo escuro do card*/
+        border: 1px solid #333; /* Borda sutil*/
+        border-radius: 12px; /* Cantos arredondados*/
+        padding: 32px 24px; /* Espaço interno*/
+        width: 280px; /*Largura fixa de cada card*/
+    }
+
+    .card-servico h3 {
+        color: var(--azul); /*Azul de destaque*/
+        margin-bottom: 12px; /* Espaço entre texto e título*/
+    }
+
+    .card-servico p {
+        color: var(--cinza); /* Cinza claro para o texto*/
+        font-size: 0.95rem; /* Levemente menor que o corpo*/
+        line-height: 1.6; /* Espaçamento entre linhas*/
+    }
+
+    .avatar-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 500;
+    }
+
+    .avatar {
+        width: 180px;
+        animation: flutuar 3s ease-in-out infinite;
+    }
+
+    .speech {
+        position: absolute;
+        bottom: 180px;
+        right: 20px;
+
+        width: 260px;
+        min-height: 60px;
+
+        background: #fff;
+        color: #111;
+
+        padding: 15px;
+        border-radius: 15px;
+
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+        z-index: 500;
+    }
+
+    .speech::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 30px;
+
+        border-width: 10px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+    }
+
+    @keyframes flutuar {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .diferenciais {
+        padding: 80px 40px; /* Espaço vertical e horizontal da seção */
+        text-align: center;
+        background-color: #111; /* levemente diferente para separar as seções*/
+    }
+
+    .diferenciais h2 {
+        font-size: 2rem; /* Tamanho do título*/
+        margin-bottom: 40px; /* Espaço entre título e cards*/
+        color: #fff;
+    }
+
+    .diferenciais-grid {
+        display: flex;
+        justify-content: center; /* Centraliza os cards */
+        gap: 24px; /* Espaço entre os cards*/
+        flex-wrap: wrap; /* Quebra linha em telas menores*/
+    }
+
+    .card-diferencial {
+        background-color: var(--preto); /* Fundo escuro do card*/
+        border: 1px solid #333; /* Borda sutil*/
+        border-radius: 12px; /* Cantos arredondados*/
+        padding: 32px 24px; /* Espaço interno*/
+        width: 220px; /* Largura de cada card*/
+    }
+
+    .ícone {
+        font-size: 2.5rem; /* Tamanho do emoji*/
+        display: block;
+        margin-bottom: 16px; /* Espaço entre o ícone e título*/
+    }
+
+    .card-diferencial h3 {
+        color: var(--azul); /* Azul destaque*/
+        margin-bottom: 10px;
+    }
+
+    .card-diferencial p {
+        color: var(--cinza); /* Cinza claro*/
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--preto);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+    }
+
+    #loading.escondido {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .loading-conteudo{
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .loading-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .spinner {
+        width: 80px;
+        height: 80px;
+        border: 4px solid var(--cinza-escuro);
+        border-top: 4px solid var(--azul);
+        border-radius: 50%;
+        animation: girar 0.8s linear infinite;
+    }
+
+    @keyframes girar {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #form-orcamento {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    #form-orcamento input,
+    #form-orcamento select,
+    #form-orcamento textarea {
+        background-color: var(--preto);
+        border: 2px solid var(--azul);
+        border-radius: 8px;
+        padding: 12px;
+        color: var(--branco);
+        font-size: 15px;
+        font-family: inherit;
+    }
+
+    #form-orcamento textarea {
+        resize: vertical;
+    }
+
+    #form-orcamento input::placeholder,
+    #form-orcamento textarea::placeholder {
+        color: #888;
+    }
