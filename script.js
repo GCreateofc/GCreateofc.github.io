@@ -2,8 +2,10 @@
 
 window.addEventListener('load', () => {
     const loading = document.getElementById('loading');
-    loading.classList.add('escondido')
-}, 600);
+    setTimeout(() => {
+        loading.classList.add('escondido');
+    }, 600);
+});
 
 
 
@@ -182,7 +184,8 @@ if (formOrcamento) {
 
             alert('Mensagem copiada! Cole no chat do Instagram.');
             Window.location.href = 'https://www.instagram.com/GCreateOficial' ;
+            modal.classList.remove("ativo");
         });
 
-        modal.classList.remove("ativo");
+        
     }
