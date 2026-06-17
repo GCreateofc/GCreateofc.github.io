@@ -610,3 +610,48 @@ footer {
     #form-orcamento textarea::placeholder {
         color: #888;
     }
+
+    .como-funciona {
+        padding: 80px; 
+        text-align: center;
+    }
+
+    .como-funciona h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: var(--branco);
+    }
+
+    .passos-grid {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .card-passo {
+        background-color: var(--cinza-escuro);
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 32px 24px;
+        width: 220px;
+    }
+
+    .card-passo .numero {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--azul);
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .card-passo h3 {
+        color: var(--branco);
+        margin-bottom: 10px;
+    }
+
+    .card-passo p {
+        color: var(--cinza);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
