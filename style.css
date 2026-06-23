@@ -706,3 +706,55 @@ footer {
         font-size: 0.9rem;
         line-height: 1.6;
     }
+
+    .valores {
+        padding: 80px 40px;
+        text-align: center;
+        background-color: #111;
+    }
+
+    .valores h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: var(--branco);
+    }
+
+    .valores-grid {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .card-valor {
+        background-color: var(--preto);
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 32px 24px;
+        width: 220px;
+        transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .card-valor:hover {
+        transform: translateY(-8px);
+        border: 2px solid var(--azul);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+    }
+
+    .valor-icone {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .card-valor h3 {
+        color: var(--azul);
+        margin-bottom: 10px;
+    }
+
+    .card-valor p {
+        color: var(--cinza);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
