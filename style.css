@@ -168,16 +168,25 @@ section h2 {
 #sobre {
     display: flex; /* Usa flexbox para layout */
     flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    text-align: center; /* Alinha o texto ao centro */
-    gap: 30px; /* Adiciona espaçamento entre os elementos do sobre */
+    align-items: flex-start; 
+    text-align: left; /* Alinha o texto ao centro */
+    gap: 20px; /* Adiciona espaçamento entre os elementos do sobre */
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 30px;
+    border-left: 4px solid var(--azul);
+}
+
+#sobre h2 {
+    font-size: 36px;
+    color: var(--branco);
 }
 
 #sobre p {
     max-width: 600px; /* Define a largura máxima do parágrafo do sobre para melhorar a legibilidade */
     color: var(--cinza); /* Define a cor do parágrafo do sobre */
     font-size: 18px; /* Define o tamanho da fonte do parágrafo do sobre */
-    line-height: 1.6; /* Aumenta o espaçamento entre as linhas do parágrafo do sobre */
+    line-height: 1.8; /* Aumenta o espaçamento entre as linhas do parágrafo do sobre */
 }
 
 footer {
