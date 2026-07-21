@@ -821,3 +821,20 @@ footer {
         font-size: 14px;
         line-height: 1.6;
     }
+
+    .btn-exemplo {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 8px 20px;
+        border: 2px solid var(--azul);
+        border-radius: 8px;
+        color: var(--azul);
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-exemplo:hover {
+        background-color: var(--azul);
+        color: var(--branco);
+    }

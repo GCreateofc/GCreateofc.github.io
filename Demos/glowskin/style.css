@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa: #f4a7b9;
+    --rosa-escuro: #e07a8f;
+    --dourado: #c9a96e;
+    --bege: #fdf6f0;
+    --bege-escuro: #f5e6d8;
+    --cinza: #6b6b6b;
+    --preto: #2d2d2d;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: var(--branco);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 180px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cinza);
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+.btn-nav {
+    background-color: var(--dourado);
+    color: var(--branco) !important;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: background-color 0.3s !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--rosa-escuro) !important;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+    background-color: var(--bege);
+    min-height: 90vh;
+    gap: 40px;
+}
+
+.hero-conteudo {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--bege-escuro);
+    color: var(--dourado);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    width: fit-content;
+}
+
+#hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--preto);
+}
+
+#hero p {
+    font-size: 18px;
+    color: var(--cinza);
+    line-height: 1.8;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: var(--branco);
+    padding: 16px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    width: fit-content;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: var(--rosa-escuro);
+    transform: translateY(-3px);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hero-stats strong {
+    font-size: 22px;
+    color: var(--dourado);
+    font-family: 'Playfair Display' serif;
+}
+
+.hero-stats span {
+    font-size: 13px;
+    color: var(--cinza);
+}
+
+.hero-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-placeholder {
+    font-size: 200px;
+    filter: drop-shadow(0 20px 40px rgba(201, 169, 110, 0.3));
+}
+
+#beneficios {
+    padding: 80px 60px;
+    text-align: center;
+    background-color: var(--branco);
+}
+
+#beneficios h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--preto);
+}
+
+.beneficios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.beneficio-card {
+    background-color: var(--bege);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 280px;
+    transition: transform 0.3s;
+    border-left: 4px solid var(--dourado);
+    text-align: left;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-8px);
+}
+
+.beneficio-card span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.beneficio-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--preto);
+}
+
+.beneficio-card p {
+    font-size: 15px;
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+#como-usar {
+    padding: 80px 60px;
+    background-color: var(--bege-escuro);
+    text-align: center;
+}
+
+#como-usar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--preto);
+}
+
+.passos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.passo {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; 
+}
+
+.numero {
+    width: 60px;
+    height: 60px;
+    background-color: var(--dourado);
+    color: var(--branco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.passo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--preto);
+}
+
+.passo p {
+    font-size: 15px;
+    color: var(--cinza);
+    line-height: 1.6;
+    text-align: center;
+}
+
+#depoimentos {
+    padding: 80px 60px;
+    background-color: var(--branco);
+    text-align: center;
+}
+
+#depoimentos h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--preto);
+}
+
+.depoimentos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.depoimento-card {
+    background-color: var(--bege);
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: left;
+    border-left: 4px solid var(--dourado);
+}
+
+.depoimento-card p {
+    font-size: 15px;
+    color: var(--cinza);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.depoimento-card strong {
+    color: var(--dourado);
+    font-size: 14px;
+}
+
+#comprar {
+    padding: 80px 60px;
+    background: linear-gradient(135deg, var(--bege-escuro), var(--bege));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#comprar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--preto);
+}
+
+#comprar p {
+    font-size: 18px;
+    color: var(--cinza);
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.preco-antigo {
+    font-size: 18px;
+    color: var(--cinza);
+    text-decoration: line-through;
+}
+
+.preco-atual {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--dourado);
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: var(--branco);
+    padding: 18px 48px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: var(--rosa-escuro);
+    transform: translateY(-3px);
+}
+
+.garantia {
+    font-size: 14px;
+    color: var(--cinza);
+}
+
+footer {
+    background-color: var(--preto);
+    color: #aaa;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer a {
+    color: var(--dourado);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    #hero {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-conteudo {
+        align-items: center;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .produto-placeholder {
+        font-size: 120px;
+    }
+
+    #beneficios, #como-usar, #depoimentos, #comprar {
+        padding: 60px 20px;
+    }
+
+    #beneficios h2, #como-usar, #depoimentos h2, #comprar h2 {
+        font-size: 28px;
+    }
+}
