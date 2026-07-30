@@ -17,12 +17,12 @@
     --cinza2: #1d1d1d;
     --branco: #ffffff;
     --texto: #b8b8b8;
-    --radius: 22px;
-    --transition: .35 ease;
 }
 
-body {
-    background:#0a0a0a;
+ body {
+    background: radial-gradient(circle at top right,
+    rgba(124, 58, 237, .12),
+    transparent 35%), #0a0a0a;
     color: #fff;
     font-family: 'Inter',sans-serif;
     overflow-x: hidden;
@@ -158,7 +158,7 @@ nav a:hover::after {
 
 .hero h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 6rem;
+    font-size: clamp(3rem,6vw,5.5rem);
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: -2px;
@@ -214,6 +214,12 @@ nav a:hover::after {
     background: var(--roxo);
 }
 
+.btn-hero,
+.btn-nav,
+.btn-hero-outline {
+    transition: all .35s ease;
+}
+
 .hero-imagem {
     flex: 1;
     display: flex;
@@ -234,7 +240,7 @@ nav a:hover::after {
 }
 
 .hero-imagem img {
-    width: 470px;
+    width: min(470px, 100%);
     border-radius: 30px;
     border: 3px solid rgba(124, 58, 237, .30);
     transition: .4s;
@@ -245,12 +251,18 @@ nav a:hover::after {
     transform: scale(1.03);
 }
 
+.hero h1,
+.pagina-topo h1,
+.cta h2 {
+    text-shadow: 0 0 25px rgba(124, 58, 237, .18);
+}
+
 /*================================
         Sobre
 =================================*/
 
 #sobre {
-    padding: 180px 0 120px;
+    padding: 140px 0;
 }
 
 .sobre-grid {
@@ -318,6 +330,11 @@ footer {
 
 footer a{
     color: #7c3aed;
+    transition: .35s ease;
+}
+
+footer a:hover {
+    color: #a855f7;
 }
 
 /*===============================
@@ -343,7 +360,7 @@ footer a{
 =================================*/
 
 .pagina-topo {
-    padding: 160px 0 80px;
+    padding: 180px 0 100px;
     text-align: center;
 }
 
@@ -379,7 +396,7 @@ footer a{
     transition: .35s;
 }
 
-.card-servico>:hover {
+.card-servico:hover {
     transform: translateY(-12px);
     border-color: var(--roxo);
     box-shadow: 0 20px 45px rgba(124, 58, 237, .18);
@@ -465,6 +482,7 @@ footer a{
 .etapa span {
     width: 65px;
     height: 65px;
+    border-radius: 50%;
     margin: 0 auto 25px;
     background: var(--roxo);
     color: #fff;
@@ -545,7 +563,7 @@ footer a{
 
 .cta .btn-hero:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(124, 58, 237, rgba(124, 58, 237, .35));
+    box-shadow: 0 20px 40px rgba(124, 58, 237, .35);
 }
 
 /*=================================
@@ -558,15 +576,17 @@ footer a{
 
 .grid-portfolio {
     display: grid;
+    align-items: stretch;
     grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
     gap: 35px;
 }
 
 .card-projeto {
+    display: flex;
+    flex-direction: column;
     background: #141414;
     overflow: hidden;
     border-radius: 24px;
-    overflow: hidden;
     transition: all .35s ease;
     border: 1px solid rgba(255, 255, 255, .06);
 }
@@ -579,6 +599,7 @@ footer a{
 
 .card-projeto img {
     width: 100%;
+    display: block;
     height: 240px;
     object-fit: cover;
     transition: .4s;
@@ -590,6 +611,9 @@ footer a{
 
 .info {
     padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .info span{
@@ -657,11 +681,6 @@ footer a{
     color: var(--texto);
 }
 
-.cta {
-    padding: 120px 0;
-    text-align: center;
-}
-
 .cta h2 {
     font-size: 56px;
     margin-bottom: 20px;
@@ -673,22 +692,36 @@ footer a{
     margin-bottom: 40px;
 }
 
+.card-servico,
+.card-projeto,
+.card-rede,
+.etapa {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
 @media (max-width: 768px) {
+
+    .header {
+        height: auto;
+    }
+
     .header .container {
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        height: auto;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     nav {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 18px;
     }
 
     .hero {
-        padding-top: 160px;
+        flex-direction: column-reverse;
+        text-align: center;
     }
 
     .hero h1 {
@@ -697,10 +730,12 @@ footer a{
 
     .hero p {
         font-size: 18px;
+        margin: auto;
     }
 
     .hero-btns {
         flex-direction: column;
+        justify-content: center;
     }
 
     .sobre-grid {
@@ -713,6 +748,11 @@ footer a{
 
     .sobre-texto p {
         font-size: 18px;
+    }
+
+    .sobre-stats {
+        flex-wrap: wrap;
+        gap: 35px;
     }
 
     .stat strong {
