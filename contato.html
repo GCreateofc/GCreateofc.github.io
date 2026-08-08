@@ -12,6 +12,7 @@
     <meta property="og:image" content="https://gcreateofic.github.io/Logo.jpg">
     <meta property="og:url" content="https://gcreateofic.github.io/contato.html">
     <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -41,30 +42,88 @@
         </nav>
     </header>
 
-    <main>
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Gostou do que viu? Nos chame no Instagram e vamos conversar sobre seu projeto!</p>
+<main>
+    <section id="contato">
 
-            <div class="contato-cards">
-                <div class="card-contato">
-                    <span class="contato-icone">🕐</span>
-                    <h3>Horário de Atendimento</h3>
-                    <p>Segunda a Sexta</p>
-                    <p>9h às 20h</p>
+        <div class="contato-intro">
+            <span class="contato-tag">Fale Conosco</span>
+
+            <h1>
+                Vamos transformar sua <span>ideia em realidade?</span>
+            </h1>
+
+            <p>
+                Tem um projeto em mente ou precisa de um site para sua empresa?
+                Entre em contato com a GC Create e vamos conversar sobre a melhor solução para você.
+            </p>
+        </div>
+
+        <div class="contato-cards">
+
+            <!-- Horário -->
+            <div class="card-contato">
+                <div class="contato-icone">
+                    <i class="fa-regular fa-clock"></i>
                 </div>
 
-                <div class="card-contato">
-                    <span class="contato-icone">⏱️</span>
-                    <h3>Tempo de Resposta</h3>
-                    <p>Respondemos em</p>
-                    <p>até 24 horas</p>
-                </div>
+                <h3>Horário de Atendimento</h3>
+
+                <p>Segunda a Sábado</p>
+                <p>9h às 20h</p>
             </div>
-            
-            <a href="https://www.instagram.com/GCCreateOficial" target="_blank" class="btn">Nos chame no Instagram</a>
-        </section>
-    </main>
+
+            <!-- Tempo de resposta -->
+            <div class="card-contato">
+                <div class="contato-icone">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>Tempo de Resposta</h3>
+
+                <p>Respondemos em</p>
+                <p>até 24 horas</p>
+            </div>
+
+        </div>
+
+        <!-- Canais de contato -->
+        <div class="canais-contato">
+
+            <a href="https://www.instagram.com/GCCreateOficial"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="canal instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <div>
+                    <strong>Instagram</strong>
+                    <span>@GCCreateOficial</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square seta"></i>
+            </a>
+
+
+            <a href="https://wa.me/5511947705159"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="canal whatsapp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <div>
+                    <strong>WhatsApp</strong>
+                    <span>Fale diretamente conosco</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square seta"></i>
+            </a>
+
+        </div>
+
+    </section>
+</main>
 
     <footer>
         <p>&copy; 2026 GC Create. Todos os direitos reservados.</p>
@@ -73,10 +132,9 @@
     <div class="avatar-box">
         <div class="speech" id="speech"></div>
 
-            <img src="avatar.png" alt="GCreate Avatar" class="avatar">
+        <img src="avatar.png" alt="GCreate Avatar" class="avatar">
     </div>
 
-    <script src="script.js"></script>
-    
+        <script src="script.js"></script>
 </body>
 </html>

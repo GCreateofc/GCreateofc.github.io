@@ -771,57 +771,136 @@ footer {
     .contato-cards {
         display: flex;
         justify-content: center;
-        gap: 30px;
+        gap: 25px;
         flex-wrap: wrap;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
     .card-contato {
-        background-color: var(--cinza-escuro);
-        border-radius: 12px;
-        padding: 32px 24px;
-        width: 220px;
-        text-align: center;
         position: relative;
+        width: 260px;
+        padding: 35px 25px;
+        background: linear-gradient(145deg, #1c1c1c, #111);
+        border: 1px solid #292929;
+        border-radius: 18px;
         overflow: hidden;
-        border: 2px solid transparent;
-        background-clip: padding-box;
+        transition: .35 ease;
     }
 
     .card-contato::before {
         content: '';
         position: absolute;
-        top: -2px;
-        left: -100%;
-        width: 60%;
-        height: calc(100% + 4px);
-        background: linear-gradient(90deg, transparent, var(--azul), transparent);
-        animation: brilho 2s linear infinite;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--azul);
     }
 
-    @keyframes brilho {
-        0% { left: -100%; }
-        100% { left: 200%; }
+    .card-contato:hover {
+        transform: translateY(-8px);
+        border-color: var(--azul);
+        box-shadow: 0 0 25px rgba(59, 130, 246, .18);
     }
 
     .contato-icone {
-        font-size: 2.5rem;
-        display: block;
-        margin-bottom: 16px;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: rgba(59, 130, 246, .1);
+        color: var(--azul);
+        font-size: 28px;
     }
 
     .card-contato h3 {
-        color: var(--azul);
-        margin-bottom: 10px;
-        font-size: 16px;
+        color: var(--branco);
+        margin-bottom: 12px;
+        font-size: 17px;
     }
 
     .card-contato p {
         color: var(--cinza);
         font-size: 14px;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 
+    .canais-contato {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .canal {
+        width: 280px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 18px 20px;
+        background: #151515;
+        border: 1px solid #292929;
+        border-radius: 15px;
+        color: var(--branco);
+        transition: .35 ease;
+    }
+
+    .canal > i:first-child {
+        font-size: 30px;
+    }
+
+    .canal div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+    }
+
+    .canal strong {
+        font-size: 16px;
+    }
+
+    .canal span {
+        color: #888;
+        font-size: 13px;
+        margin-top: 3px;
+    }
+
+    .canal .seta {
+        font-size: 14px;
+        color: #666;
+        transition: .3s;
+    }
+
+    .canal .instagram:hover {
+        border-color: #e1306c;
+        box-shadow: 0 0 25px rgba(225, 48, 108 .15);
+        transform: translateY(-5px);
+    }
+
+    .canal .instagram > i:first-child {
+        color: #e1306c;
+    }
+
+    .canal .whatsapp:hover {
+        border-color: #25D366;
+        box-shadow: 0 0 25px rgba(37, 211, 102, .15);
+        transform: translateY(-5px);
+    }
+
+    .canal .whatsapp > i:first-child {
+        color: #25D366;
+    }
+
+    .canal:hover .seta {
+        color: var(--branco);
+        transform: translate(3px, -3px);
+    }
+    
     .btn-exemplo {
         display: inline-block;
         margin-top: 16px;
@@ -903,3 +982,84 @@ footer {
             box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
         }
     }
+
+    #contato {
+        min-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .contato-intro {
+        max-width: 800px;
+        margin-bottom: 60px;
+    }
+
+    .contato-tag {
+        display: inline-block;
+        color: var(--azul);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .contato-intro h1 {
+        font-size: 52px;
+        line-height: 1.15;
+        margin-bottom: 25px;
+    }
+
+    .contato-intro h1 span {
+        color: var(--azul);
+    }
+
+    .contato-intro p {
+        color: var(--cinza);
+        font-size: 18px;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    @media (max-width: 768px) {
+
+    #contato {
+        padding: 80px 20px;
+    }
+
+    .contato-intro {
+        margin-bottom: 45px;
+    }
+
+    .contato-intro h1 {
+        font-size: 36px;
+    }
+
+    .contato-intro p {
+        font-size: 16px;
+    }
+
+    .contato-cards {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .card-contato {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .canais-contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .canal {
+        width: 100%;
+        max-width: 350px;
+    }
+}
