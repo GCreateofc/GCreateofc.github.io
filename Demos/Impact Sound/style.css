@@ -769,3 +769,57 @@ section {
         width: 150px;
     }
 }
+
+@media (max-width: 991px) {
+    .hero {
+        min-height: auto;
+        padding-top: 150px;
+        padding-bottom: 80px;
+        isolation: isolate;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-texto {
+        position: relative;
+        z-index: 20;
+    }
+
+    .hero-texto h1 {
+        font-size: 3rem;
+    }
+
+    .hero-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        position: relative;
+        z-index: 30;
+    }
+
+    .hero-botoes a {
+        width: 100%;
+        min-height: 56px;
+        justify-content: center;
+        position: relative;
+        z-index: 31;
+        pointer-events: auto;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .hero-imagem {
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+    }
+}
