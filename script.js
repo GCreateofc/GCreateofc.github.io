@@ -174,18 +174,12 @@ if (formOrcamento) {
             texto += `\nDescrição do Projeto: ${descricao}` ;
         }
 
-        const temp = document.createElement('textarea');
-        temp.value = texto;
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand('copy');
-        document.body.removeChild(temp);
+        const telefone = '5511947705159';
 
+        const urlWhatsapp = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
 
-            alert('Mensagem copiada! Cole no chat do Instagram.');
-            Window.location.href = 'https://www.instagram.com/GCreateOficial' ;
-            modal.classList.remove("ativo");
-        });
+        window.open(urlWhatsapp, '_blank');
 
-        
+        modal.classList.remove("ativo");
+        }); 
     }
