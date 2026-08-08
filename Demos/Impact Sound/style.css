@@ -264,6 +264,8 @@ section {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 30px;
+    position: relative;
+    z-index: 9999;
 }
 
 .hero-imagem {
