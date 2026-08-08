@@ -49,7 +49,7 @@ if (abrirModal) {
         botao.addEventListener('click', () => {
             const servico = botao.dataset.servico;
             const mensagem = encodeURIComponent(`Olá, Tenho interesse em um ${servico}.`);
-            window.location.href = 'https://www.instagram.com/GCreateOficial';
+            window.location.href = 'https://www.instagram.com/GCCreateOficial';
             modal.classList.remove('ativo');
         });
     });
@@ -84,7 +84,7 @@ let mensagens = [];
 
 if (pagina.includes("sobre")) {
     mensagens = [
-        "Conheça a história da GCreate.",
+        "Conheça a história da GC Create.",
         "Transformamos ideias em experiências digitais.",
         "Nosso foco é criar sites modernos e profissionais."
     ];
@@ -113,7 +113,7 @@ else if (pagina.includes("contato")) {
 else {
     // Início
     mensagens = [
-        "Olá! Eu sou o Gee da GCreate 👋",
+        "Olá! Eu sou o GC da GC Create 👋",
         "Criamos sites modernos e profissionais.",
         "Seu projeto merece uma presença digital forte.",
         "Solicite um orçamento sem compromisso 🚀"
