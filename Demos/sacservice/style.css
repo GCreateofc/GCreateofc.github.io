@@ -1,0 +1,1606 @@
+/* =========================================================
+   SAC SERVICE — INDEX
+   CSS PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+::selection {
+    background: #d71920;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+    --preto: #080808;
+    --preto-2: #0d0d0d;
+    --preto-3: #121212;
+
+    --grafite: #181818;
+    --grafite-2: #222222;
+
+    --vermelho: #d71920;
+    --vermelho-claro: #ef2b32;
+    --vermelho-escuro: #a80f15;
+
+    --branco: #ffffff;
+    --cinza-claro: #d2d2d2;
+    --cinza: #a5a5a5;
+    --cinza-escuro: #777777;
+
+    --borda: rgba(255, 255, 255, 0.08);
+
+    --transicao: 0.3s ease;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--preto);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--vermelho);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vermelho-claro);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 14px 6%;
+
+    background: rgba(8, 8, 8, 0.95);
+
+    border-bottom: 1px solid var(--borda);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 145px;
+    max-height: 62px;
+
+    object-fit: contain;
+
+    transition: var(--transicao);
+}
+
+.logo:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu ul {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 0;
+
+    color: #bdbdbd;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--vermelho);
+
+    transition: var(--transicao);
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--branco);
+}
+
+.menu a:hover::after,
+.menu a.ativo::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO DO HEADER
+   ========================================================= */
+
+.btn-header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 20px;
+
+    background: var(--vermelho);
+
+    border: 1px solid var(--vermelho);
+    border-radius: 6px;
+
+    color: var(--branco);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: var(--transicao);
+}
+
+.btn-header:hover {
+    background: var(--vermelho-claro);
+    border-color: var(--vermelho-claro);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 30px rgba(215, 25, 32, 0.22);
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.section-tag,
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--vermelho);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-tag {
+    margin-bottom: 20px;
+}
+
+.section-tag i,
+.hero-tag i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+   ========================================================= */
+
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 24px;
+
+    background: var(--vermelho);
+
+    border: 1px solid var(--vermelho);
+    border-radius: 6px;
+
+    color: var(--branco);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: var(--transicao);
+}
+
+.btn-principal:hover {
+    background: var(--vermelho-claro);
+    border-color: var(--vermelho-claro);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(215, 25, 32, 0.25);
+}
+
+.btn-principal i {
+    transition: var(--transicao);
+}
+
+.btn-principal:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   BOTÃO SECUNDÁRIO
+   ========================================================= */
+
+.btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 15px 24px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 6px;
+
+    color: var(--branco);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: var(--transicao);
+}
+
+.btn-secundario:hover {
+    background: var(--vermelho);
+
+    border-color: var(--vermelho);
+
+    transform: translateY(-3px);
+}
+
+.btn-secundario i {
+    transition: var(--transicao);
+}
+
+.btn-secundario:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 88px);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 8, 1) 0%,
+            rgba(8, 8, 8, 0.97) 30%,
+            rgba(8, 8, 8, 0.82) 50%,
+            rgba(8, 8, 8, 0.45) 73%,
+            rgba(8, 8, 8, 0.12) 100%
+        ),
+        url("imagens/segurança.png");
+
+    background-size: cover;
+    background-position: right center;
+}
+
+
+/* =========================================================
+   BRILHO VERMELHO DO HERO
+   ========================================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: var(--vermelho);
+
+    opacity: 0.06;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.4)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTEÚDO HERO
+   ========================================================= */
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+
+    width: 55%;
+    max-width: 760px;
+
+    margin-left: 8%;
+
+    padding: 90px 0 150px;
+}
+
+.hero h1 {
+    margin-bottom: 24px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(44px, 5vw, 70px);
+
+    line-height: 1.07;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--vermelho);
+}
+
+.hero p {
+    max-width: 600px;
+
+    margin-bottom: 34px;
+
+    color: #c5c5c5;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÕES HERO
+   ========================================================= */
+
+.hero-botoes {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO HERO
+   ========================================================= */
+
+.hero-info {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 28px;
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+
+    gap: 45px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.info-icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: rgba(215, 25, 32, 0.07);
+
+    border: 1px solid rgba(215, 25, 32, 0.35);
+
+    border-radius: 7px;
+
+    color: var(--vermelho);
+
+    font-size: 16px;
+}
+
+.info-item strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--branco);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+.info-item span {
+    display: block;
+
+    color: var(--cinza-escuro);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO
+   ========================================================= */
+
+.apresentacao {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 90px;
+
+    padding: 120px 60px;
+}
+
+
+/* =========================================================
+   IMAGEM DA APRESENTAÇÃO
+   ========================================================= */
+
+.apresentacao-imagem {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.apresentacao-imagem img {
+    width: 100%;
+    max-width: 520px;
+
+    height: 540px;
+
+    object-fit: cover;
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    filter: grayscale(15%);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45);
+
+    transition: 0.4s ease;
+}
+
+.apresentacao-imagem img:hover {
+    filter: grayscale(0%);
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   CONTEÚDO APRESENTAÇÃO
+   ========================================================= */
+
+.apresentacao-conteudo {
+    max-width: 560px;
+}
+
+.apresentacao-conteudo h2 {
+    margin: 15px 0 24px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(32px, 4vw, 47px);
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+}
+
+.apresentacao-conteudo h2 span {
+    color: var(--vermelho);
+}
+
+.apresentacao-conteudo p {
+    margin-bottom: 16px;
+
+    color: var(--cinza);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVIÇOS
+   ========================================================= */
+
+.servicos-home {
+    padding: 110px 6%;
+
+    background: #0c0c0c;
+
+    border-top: 1px solid #151515;
+    border-bottom: 1px solid #151515;
+}
+
+
+/* =========================================================
+   TOPO DAS SEÇÕES
+   ========================================================= */
+
+.section-topo {
+    max-width: 1200px;
+
+    margin: 0 auto 50px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.section-topo h2 {
+    margin-top: 14px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(31px, 4vw, 45px);
+
+    line-height: 1.15;
+}
+
+.section-topo h2 span {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   GRID DE SERVIÇOS
+   ========================================================= */
+
+.servicos-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARD DE SERVIÇO
+   ========================================================= */
+
+.servico-card {
+    position: relative;
+
+    min-height: 305px;
+
+    padding: 30px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #0e0e0e
+        );
+
+    border: 1px solid #242424;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+.servico-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--vermelho);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.35s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(215, 25, 32, 0.5);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.servico-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   ÍCONE DO SERVIÇO
+   ========================================================= */
+
+.servico-icone {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    background: rgba(215, 25, 32, 0.08);
+
+    border: 1px solid rgba(215, 25, 32, 0.2);
+
+    border-radius: 8px;
+
+    color: var(--vermelho);
+
+    font-size: 22px;
+
+    transition: 0.35s ease;
+}
+
+.servico-card:hover .servico-icone {
+    background: var(--vermelho);
+
+    color: var(--branco);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   TEXTO DO SERVIÇO
+   ========================================================= */
+
+.servico-card h3 {
+    margin-bottom: 12px;
+
+    color: var(--branco);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+}
+
+.servico-card p {
+    color: #8d8d8d;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LINK DO SERVIÇO
+   ========================================================= */
+
+.servico-card > a {
+    position: absolute;
+
+    left: 25px;
+    bottom: 23px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--branco);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.servico-card > a i {
+    color: var(--vermelho);
+
+    transition: 0.3s ease;
+}
+
+.servico-card > a:hover {
+    color: var(--vermelho);
+}
+
+.servico-card > a:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DIFERENCIAIS
+   ========================================================= */
+
+.diferenciais-home {
+    padding: 120px 6%;
+
+    text-align: center;
+
+    background: #101010;
+}
+
+.diferenciais-titulo {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+}
+
+.diferenciais-titulo h2 {
+    margin-top: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(32px, 4vw, 47px);
+
+    line-height: 1.12;
+}
+
+.diferenciais-titulo h2 span {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   GRID DIFERENCIAIS
+   ========================================================= */
+
+.diferenciais-grid {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.diferencial-item {
+    padding: 30px 22px;
+
+    background: transparent;
+
+    border: 1px solid #292929;
+
+    border-radius: 9px;
+
+    transition: 0.3s ease;
+}
+
+.diferencial-item:hover {
+    background: #151515;
+
+    border-color: rgba(215, 25, 32, 0.45);
+
+    transform: translateY(-5px);
+}
+
+.diferencial-item > i {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: rgba(215, 25, 32, 0.08);
+
+    border-radius: 50%;
+
+    color: var(--vermelho);
+
+    font-size: 21px;
+
+    transition: 0.3s ease;
+}
+
+.diferencial-item:hover > i {
+    background: var(--vermelho);
+
+    color: var(--branco);
+
+    transform: scale(1.08);
+}
+
+.diferencial-item h3 {
+    margin-bottom: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+}
+
+.diferencial-item p {
+    color: #858585;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+    position: relative;
+
+    padding: 110px 30px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #160607,
+            #080808 60%,
+            #100303
+        );
+
+    border-top: 1px solid rgba(215, 25, 32, 0.15);
+}
+
+.cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -250px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: var(--vermelho);
+
+    opacity: 0.07;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+}
+
+.cta-conteudo {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.cta-icone {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 24px;
+
+    background: rgba(215, 25, 32, 0.08);
+
+    border: 1px solid rgba(215, 25, 32, 0.3);
+
+    border-radius: 50%;
+
+    color: var(--vermelho);
+
+    font-size: 27px;
+}
+
+.cta h2 {
+    margin: 15px 0 20px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.12;
+}
+
+.cta h2 span {
+    color: var(--vermelho);
+}
+
+.cta p {
+    max-width: 620px;
+
+    margin: 0 auto 30px;
+
+    color: var(--cinza);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÕES CTA
+   ========================================================= */
+
+.cta-botoes {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 15px 24px;
+
+    background: transparent;
+
+    border: 1px solid #25d366;
+
+    border-radius: 6px;
+
+    color: #25d366;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #25d366;
+
+    color: var(--branco);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.15);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #050505;
+
+    border-top: 1px solid #1d1d1d;
+
+    padding: 55px 6% 20px;
+}
+
+.footer-conteudo {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 50px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #1b1b1b;
+}
+
+.footer-logo img {
+    width: 145px;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    max-width: 300px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.footer-social h3 {
+    margin-bottom: 14px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+
+    gap: 9px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: 1px solid #292929;
+
+    border-radius: 6px;
+
+    color: #999999;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--vermelho);
+
+    border-color: var(--vermelho);
+
+    color: var(--branco);
+
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #5f5f5f;
+
+    font-size: 11px;
+}
+
+.footer-bottom i {
+    margin-right: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 1100PX
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 14px 4%;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .hero-conteudo {
+        width: 65%;
+
+        margin-left: 6%;
+    }
+
+    .hero-info {
+        left: 6%;
+        right: 6%;
+
+        gap: 30px;
+    }
+
+    .servicos-grid,
+    .diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .apresentacao {
+        gap: 55px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 850PX
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        min-height: 76px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 650px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(8, 8, 8, 0.98),
+                rgba(8, 8, 8, 0.82)
+            ),
+            url("imagens/segurança.png");
+
+        background-position: 70% center;
+    }
+
+    .hero-conteudo {
+        width: 85%;
+
+        margin-left: 6%;
+
+        padding: 80px 0 120px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 7vw, 58px);
+    }
+
+    .hero-info {
+        gap: 20px;
+    }
+
+    .info-item span {
+        display: none;
+    }
+
+    .apresentacao {
+        grid-template-columns: 1fr;
+
+        padding: 90px 6%;
+
+        gap: 55px;
+    }
+
+    .apresentacao-conteudo {
+        max-width: 700px;
+    }
+
+    .apresentacao-imagem img {
+        height: 500px;
+    }
+
+    .servicos-home,
+    .diferenciais-home {
+        padding: 90px 6%;
+    }
+
+    .footer-conteudo {
+        padding-bottom: 30px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 650PX
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        min-height: auto;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 12px 15px;
+    }
+
+    .logo {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .menu {
+        width: 100%;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu ul {
+        width: max-content;
+
+        margin: auto;
+
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 650px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(8, 8, 8, 0.98),
+                rgba(8, 8, 8, 0.78)
+            ),
+            url("imagens/segurança.png");
+
+        background-position: 68% center;
+    }
+
+    .hero-conteudo {
+        width: 90%;
+
+        margin: 0 auto;
+
+        padding: 70px 0;
+    }
+
+    .hero-tag {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .hero-info {
+        display: none;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-botoes a {
+        width: 100%;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        padding: 14px 18px;
+
+        font-size: 12px;
+    }
+
+    .apresentacao {
+        padding: 75px 6%;
+    }
+
+    .apresentacao-imagem img {
+        height: 430px;
+    }
+
+    .apresentacao-conteudo h2,
+    .section-topo h2,
+    .diferenciais-titulo h2,
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .section-topo {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .servicos-home,
+    .diferenciais-home {
+        padding: 75px 6%;
+    }
+
+    .servicos-grid,
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servico-card {
+        min-height: 290px;
+    }
+
+    .cta {
+        padding: 80px 20px;
+    }
+
+    .cta-botoes {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .cta-botoes a {
+        width: 100%;
+    }
+
+    footer {
+        padding: 45px 6% 20px;
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 400PX
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .apresentacao-imagem img {
+        height: 370px;
+    }
+
+    .servico-card {
+        padding: 28px 22px;
+    }
+
+    .cta h2 {
+        font-size: 29px;
+    }
+}
