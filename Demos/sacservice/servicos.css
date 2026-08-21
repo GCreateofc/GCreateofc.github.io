@@ -1,0 +1,2252 @@
+/* =========================================================
+   SAC SERVICE — PÁGINA DE SERVIÇOS
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+
+    --preto: #080808;
+    --preto-2: #0d0d0d;
+    --preto-3: #141414;
+    --preto-4: #1a1a1a;
+
+    --vermelho: #d71920;
+    --vermelho-escuro: #a80f15;
+    --vermelho-claro: #ef2b32;
+
+    --branco: #ffffff;
+
+    --cinza: #b5b5b5;
+    --cinza-claro: #d2d2d2;
+    --cinza-escuro: #777777;
+
+    --borda: rgba(255, 255, 255, 0.08);
+
+    --transicao: .3s ease;
+}
+
+
+/* =========================================================
+   SELEÇÃO
+   ========================================================= */
+
+::selection {
+    background: var(--vermelho);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--preto);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--vermelho);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vermelho-claro);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(8, 8, 8, .96);
+
+    border-bottom: 1px solid var(--borda);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+
+    width: 145px;
+    height: auto;
+
+    object-fit: contain;
+
+    transition: var(--transicao);
+}
+
+.logo:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu ul {
+
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    list-style: none;
+}
+
+.menu a {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 0;
+
+    color: #d8d8d8;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--vermelho);
+
+    transition: var(--transicao);
+}
+
+.menu a:hover,
+.menu a.ativo {
+
+    color: #ffffff;
+}
+
+.menu a:hover::after,
+.menu a.ativo::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO HEADER
+   ========================================================= */
+
+.btn-header {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 20px;
+
+    background: var(--vermelho);
+
+    border: 1px solid var(--vermelho);
+
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: var(--transicao);
+}
+
+.btn-header:hover {
+
+    background: var(--vermelho-claro);
+
+    border-color: var(--vermelho-claro);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(215, 25, 32, .25);
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.section-tag {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--vermelho);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.section-tag i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HERO — SERVIÇOS
+   ========================================================= */
+
+.servicos-hero {
+
+    position: relative;
+
+    min-height: 570px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 8, .98) 0%,
+            rgba(8, 8, 8, .90) 40%,
+            rgba(8, 8, 8, .55) 70%,
+            rgba(8, 8, 8, .30) 100%
+        ),
+        url("imagens/segurança.png");
+
+    background-size: cover;
+
+    background-position: center right;
+}
+
+
+/* =========================================================
+   BRILHO HERO
+   ========================================================= */
+
+.servicos-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: var(--vermelho);
+
+    opacity: .06;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   OVERLAY HERO
+   ========================================================= */
+
+.servicos-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, .10),
+            rgba(0, 0, 0, .55)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTEÚDO HERO
+   ========================================================= */
+
+.servicos-hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 100px 6%;
+}
+
+.servicos-hero-conteudo .section-tag {
+    margin-bottom: 22px;
+}
+
+.servicos-hero-conteudo h1 {
+
+    max-width: 760px;
+
+    margin-bottom: 25px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.servicos-hero-conteudo h1 span {
+
+    display: block;
+
+    color: var(--vermelho);
+}
+
+.servicos-hero-conteudo p {
+
+    max-width: 620px;
+
+    color: #c5c5c5;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LISTA DE SERVIÇOS
+   ========================================================= */
+
+.servicos-lista {
+
+    padding: 110px 6%;
+
+    background: var(--preto-2);
+
+    border-top: 1px solid #151515;
+
+    border-bottom: 1px solid #151515;
+}
+
+
+/* =========================================================
+   TÍTULO DOS SERVIÇOS
+   ========================================================= */
+
+.servicos-titulo {
+
+    max-width: 800px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.servicos-titulo .section-tag {
+    margin-bottom: 18px;
+}
+
+.servicos-titulo h2 {
+
+    margin-bottom: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+.servicos-titulo h2 span {
+    color: var(--vermelho);
+}
+
+.servicos-titulo p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--cinza);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GRID DE SERVIÇOS
+   ========================================================= */
+
+.servicos-completos {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CARD DE SERVIÇO
+   ========================================================= */
+
+.servico-completo {
+
+    position: relative;
+
+    min-height: 330px;
+
+    display: grid;
+
+    grid-template-columns: 75px 1fr;
+
+    gap: 25px;
+
+    padding: 38px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #0d0d0d
+        );
+
+    border: 1px solid #292929;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    transition: .35s ease;
+}
+
+
+/* linha vermelha */
+
+.servico-completo::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--vermelho);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: .35s ease;
+}
+
+.servico-completo:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(215, 25, 32, .55);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, .45);
+}
+
+.servico-completo:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   NÚMERO DO CARD
+   ========================================================= */
+
+.servico-numero {
+
+    position: absolute;
+
+    top: 20px;
+    right: 23px;
+
+    color: rgba(255, 255, 255, .07);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 52px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    transition: .3s ease;
+}
+
+.servico-completo:hover .servico-numero {
+
+    color: rgba(215, 25, 32, .22);
+}
+
+
+/* =========================================================
+   ÍCONE
+   ========================================================= */
+
+.servico-icone-grande {
+
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(215, 25, 32, .09);
+
+    border: 1px solid rgba(215, 25, 32, .25);
+
+    border-radius: 8px;
+
+    color: var(--vermelho);
+
+    font-size: 26px;
+
+    transition: .35s ease;
+}
+
+.servico-completo:hover .servico-icone-grande {
+
+    background: var(--vermelho);
+
+    color: #ffffff;
+
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   TEXTO DO CARD
+   ========================================================= */
+
+.servico-texto {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-right: 25px;
+}
+
+.servico-texto h3 {
+
+    margin-bottom: 14px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.servico-texto p {
+
+    margin-bottom: 20px;
+
+    color: #929292;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LINK CARD
+   ========================================================= */
+
+.servico-texto a {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: var(--transicao);
+}
+
+.servico-texto a i {
+
+    color: var(--vermelho);
+
+    transition: var(--transicao);
+}
+
+.servico-texto a:hover {
+    color: var(--vermelho);
+}
+
+.servico-texto a:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CTA — IGUAL AO DIFERENCIAIS
+   ========================================================= */
+
+.cta {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 110px 30px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #130708 0%,
+            #080808 60%,
+            #100303 100%
+        );
+
+    border-top: 1px solid rgba(215, 25, 32, .18);
+}
+
+
+/* =========================================================
+   BRILHO CTA
+   ========================================================= */
+
+.cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -250px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #d71920;
+
+    opacity: .07;
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTEÚDO CTA
+   ========================================================= */
+
+.cta-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ÍCONE CTA
+   ========================================================= */
+
+.cta-icone {
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    background: rgba(215, 25, 32, .10);
+
+    border: 1px solid rgba(215, 25, 32, .28);
+
+    border-radius: 50%;
+
+    color: var(--vermelho);
+
+    font-size: 28px;
+
+    transition: .3s ease;
+}
+
+.cta-icone:hover {
+
+    background: var(--vermelho);
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(215, 25, 32, .20);
+}
+
+
+/* =========================================================
+   TAG CTA
+   ========================================================= */
+
+.cta .section-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    color: var(--vermelho);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TÍTULO CTA
+   ========================================================= */
+
+.cta h2 {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto 20px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.2px;
+}
+
+.cta h2 span {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   TEXTO CTA
+   ========================================================= */
+
+.cta p {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+
+    color: #aaaaaa;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÕES CTA
+   ========================================================= */
+
+.cta-botoes {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+   ========================================================= */
+
+.cta-botoes .btn-principal {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding: 15px 25px;
+
+    background: var(--vermelho);
+
+    border: 1px solid var(--vermelho);
+
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.cta-botoes .btn-principal:hover {
+
+    background: var(--vermelho-claro);
+
+    border-color: var(--vermelho-claro);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(215, 25, 32, .25);
+}
+
+
+/* =========================================================
+   BOTÃO WHATSAPP
+   ========================================================= */
+
+.cta-botoes .btn-whatsapp {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 52px;
+
+    padding: 15px 25px;
+
+    background: transparent;
+
+    border: 1px solid #25D366;
+
+    border-radius: 5px;
+
+    color: #25D366;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.cta-botoes .btn-whatsapp:hover {
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 211, 102, .15);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    background: #050505;
+
+    border-top: 1px solid #1c1c1c;
+
+    padding: 55px 6% 20px;
+}
+
+.footer-conteudo {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid #1d1d1d;
+}
+
+.footer-logo img {
+
+    width: 150px;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+
+    max-width: 300px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.footer-social h3 {
+
+    margin-bottom: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+}
+
+.social-links {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.social-links a {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #292929;
+
+    border-radius: 5px;
+
+    color: #aaaaaa;
+
+    transition: .3s ease;
+}
+
+.social-links a:hover {
+
+    background: var(--vermelho);
+
+    border-color: var(--vermelho);
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+.footer-bottom i {
+    margin-right: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 0 4%;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .servicos-completos {
+        gap: 18px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 800px
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        height: 75px;
+
+        padding: 0 4%;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .menu ul {
+        gap: 13px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .servicos-hero {
+
+        min-height: 540px;
+
+        background-position: 65% center;
+    }
+
+    .servicos-hero-conteudo {
+
+        padding: 80px 6%;
+    }
+
+    .servicos-hero-conteudo h1 {
+
+        font-size: 44px;
+    }
+
+
+    /* SERVIÇOS */
+
+    .servicos-lista {
+
+        padding: 90px 6%;
+    }
+
+    .servicos-completos {
+
+        grid-template-columns: 1fr;
+    }
+
+    .servico-completo {
+
+        min-height: 300px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-conteudo {
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 550px
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .header {
+
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+
+    .menu ul {
+        gap: 9px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+
+    /* HERO */
+
+    .servicos-hero {
+
+        min-height: 570px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(8,8,8,.97),
+                rgba(8,8,8,.72)
+            ),
+            url("imagens/segurança.png");
+
+        background-position: center;
+    }
+
+    .servicos-hero-conteudo {
+
+        padding: 70px 6%;
+    }
+
+    .servicos-hero-conteudo .section-tag {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .servicos-hero-conteudo h1 {
+
+        font-size: 36px;
+
+        letter-spacing: -1px;
+    }
+
+    .servicos-hero-conteudo p {
+
+        font-size: 15px;
+    }
+
+
+    /* TÍTULO */
+
+    .servicos-titulo {
+
+        margin-bottom: 45px;
+    }
+
+    .servicos-titulo h2 {
+
+        font-size: 31px;
+    }
+
+    .servicos-titulo p {
+
+        font-size: 15px;
+    }
+
+
+    /* CARDS */
+
+    .servico-completo {
+
+        display: block;
+
+        min-height: auto;
+
+        padding: 32px 25px;
+    }
+
+    .servico-icone-grande {
+
+        margin-bottom: 22px;
+    }
+
+    .servico-texto {
+
+        padding-right: 0;
+    }
+
+    .servico-texto h3 {
+
+        font-size: 18px;
+    }
+
+    .servico-texto p {
+
+        font-size: 13px;
+    }
+
+    .servico-numero {
+
+        top: 18px;
+        right: 20px;
+
+        font-size: 45px;
+    }
+
+
+    /* CTA */
+
+    .cta {
+
+        padding: 80px 20px;
+    }
+
+    .cta-icone {
+
+        width: 72px;
+        height: 72px;
+
+        font-size: 25px;
+
+        margin-bottom: 22px;
+    }
+
+    .cta .section-tag {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .cta h2 {
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        letter-spacing: -.6px;
+    }
+
+    .cta p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .cta-botoes {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .cta-botoes a {
+
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding: 45px 6% 20px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 400px
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .servicos-hero-conteudo h1 {
+
+        font-size: 34px;
+    }
+
+    .servicos-hero-conteudo p {
+
+        font-size: 14px;
+    }
+
+    .servico-completo {
+
+        padding: 27px 21px;
+    }
+
+    .servico-icone-grande {
+
+        width: 62px;
+        height: 62px;
+
+        font-size: 24px;
+    }
+
+    .cta {
+
+        padding: 70px 18px;
+    }
+
+    .cta h2 {
+
+        font-size: 27px;
+
+        line-height: 1.22;
+    }
+}
+
+/* =========================================================
+   CTA — SAC SERVICE
+   MESMO PADRÃO DA PÁGINA DIFERENCIAIS
+   ========================================================= */
+
+.cta {
+    position: relative;
+    width: 100%;
+
+    padding: 110px 30px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(215, 25, 32, 0.12),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #130708 0%,
+            #080808 58%,
+            #100303 100%
+        );
+
+    border-top: 1px solid rgba(215, 25, 32, 0.18);
+}
+
+
+/* =========================================================
+   BRILHO DE FUNDO
+   ========================================================= */
+
+.cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -300px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #d71920;
+
+    opacity: 0.07;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.cta-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ÍCONE
+   ========================================================= */
+
+.cta-icone {
+    width: 86px;
+    height: 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 28px;
+
+    background: rgba(215, 25, 32, 0.08);
+
+    border: 1px solid rgba(215, 25, 32, 0.45);
+
+    border-radius: 50%;
+
+    color: #d71920;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 0 35px rgba(215, 25, 32, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.cta-icone:hover {
+    background: #d71920;
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(215, 25, 32, 0.20);
+}
+
+
+/* =========================================================
+   TAG
+   ========================================================= */
+
+.cta .section-tag {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    color: #d71920;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.cta h2 {
+    width: 100%;
+
+    margin: 0 auto 22px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.2px;
+}
+
+.cta h2 span {
+    color: #d71920;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.cta p {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+
+    color: #a8a8a8;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.cta-botoes {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+   ========================================================= */
+
+.cta-botoes .btn-principal {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 56px;
+
+    padding: 15px 28px;
+
+    background: #d71920;
+
+    border: 1px solid #d71920;
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.cta-botoes .btn-principal:hover {
+    background: #ef2b32;
+
+    border-color: #ef2b32;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(215, 25, 32, 0.25);
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.cta-botoes .btn-whatsapp {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 56px;
+
+    padding: 15px 28px;
+
+    background: transparent;
+
+    border: 1px solid #25d366;
+
+    border-radius: 7px;
+
+    color: #25d366;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.cta-botoes .btn-whatsapp:hover {
+    background: #25d366;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 211, 102, 0.15);
+}
+
+
+/* =========================================================
+   CTA — TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .cta {
+        padding: 90px 25px;
+    }
+
+    .cta h2 {
+        font-size: 40px;
+    }
+}
+
+
+/* =========================================================
+   CTA — MOBILE
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .cta {
+        padding: 80px 20px;
+    }
+
+    .cta-icone {
+        width: 72px;
+        height: 72px;
+
+        font-size: 25px;
+
+        margin-bottom: 22px;
+    }
+
+    .cta .section-tag {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        letter-spacing: -0.6px;
+    }
+
+    .cta p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .cta-botoes {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .cta-botoes a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   CTA — MOBILE PEQUENO
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .cta {
+        padding: 70px 18px;
+    }
+
+    .cta h2 {
+        font-size: 27px;
+
+        line-height: 1.22;
+    }
+}
+
+/* =========================================================
+   CTA — SERVIÇOS
+   MESMO PADRÃO DA PÁGINA DIFERENCIAIS
+   ========================================================= */
+
+.servicos-cta {
+    position: relative;
+
+    width: 100%;
+
+    padding: 110px 30px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(215, 25, 32, 0.12),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #160607 0%,
+            #080808 55%,
+            #100303 100%
+        );
+
+    border-top: 1px solid rgba(215, 25, 32, 0.18);
+}
+
+
+/* =========================================================
+   BRILHO VERMELHO
+   ========================================================= */
+
+.servicos-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -300px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #d71920;
+
+    opacity: 0.07;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.servicos-cta-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ÍCONE
+   ========================================================= */
+
+.servicos-cta-icone {
+    width: 86px;
+    height: 86px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 28px;
+
+    background: rgba(215, 25, 32, 0.08);
+
+    border: 1px solid rgba(215, 25, 32, 0.45);
+
+    border-radius: 50%;
+
+    color: #d71920;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 0 35px rgba(215, 25, 32, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.servicos-cta-icone:hover {
+    background: #d71920;
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(215, 25, 32, 0.20);
+}
+
+
+/* =========================================================
+   TAG
+   ========================================================= */
+
+.servicos-cta .section-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 16px;
+
+    color: #d71920;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.servicos-cta h2 {
+    width: 100%;
+
+    margin: 0 auto 22px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.2px;
+}
+
+.servicos-cta h2 span {
+    display: inline;
+
+    color: #d71920;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.servicos-cta p {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+
+    color: #a8a8a8;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.servicos-cta-botoes {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+   ========================================================= */
+
+.servicos-cta-botoes .btn-principal {
+    min-height: 56px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 28px;
+
+    background: #d71920;
+
+    border: 1px solid #d71920;
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.servicos-cta-botoes .btn-principal:hover {
+    background: #ef2b32;
+
+    border-color: #ef2b32;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(215, 25, 32, 0.25);
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.servicos-cta-botoes .btn-whatsapp {
+    min-height: 56px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 28px;
+
+    background: transparent;
+
+    border: 1px solid #25d366;
+
+    border-radius: 7px;
+
+    color: #25d366;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.servicos-cta-botoes .btn-whatsapp:hover {
+    background: #25d366;
+
+    border-color: #25d366;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 211, 102, 0.15);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .servicos-cta {
+        padding: 80px 20px;
+    }
+
+    .servicos-cta-conteudo {
+        max-width: 100%;
+    }
+
+    .servicos-cta-icone {
+        width: 72px;
+        height: 72px;
+
+        font-size: 25px;
+
+        margin-bottom: 22px;
+    }
+
+    .servicos-cta .section-tag {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .servicos-cta h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        letter-spacing: -0.6px;
+    }
+
+    .servicos-cta p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .servicos-cta-botoes {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .servicos-cta-botoes a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .servicos-cta {
+        padding: 70px 18px;
+    }
+
+    .servicos-cta h2 {
+        font-size: 27px;
+
+        line-height: 1.22;
+    }
+}
