@@ -183,3 +183,31 @@ if (formOrcamento) {
         modal.classList.remove("ativo");
         }); 
     }
+
+    const botoesFiltro = document.querySelectorAll(".filtro-btn");
+    const projetos = document.querySelectorAll(".projeto-card");
+
+    botoesFiltro.forEach(botao => {
+        botao.addEventListener("click", () => {
+            const categoriaSelecionada = botao.dataset.filtro;
+
+            botoesFiltro.forEach(btn => {
+                btn.classList.remove("ativo");
+            });
+
+            botao.classList.add("ativo");
+
+            projetos.forEach(projeto => {
+                const categoriaProjeto = projeto.dataset.categoria;
+
+                if (
+                    categoriaSelecionada === "todos" ||
+                    categoriaProjeto === categoriaSelecionada
+                ) {
+                    projeto.style.display = "block";
+                } else {
+                    projeto.style.display = "none";
+                }
+            });
+        });
+    });

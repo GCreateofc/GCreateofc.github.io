@@ -42,44 +42,325 @@
     </header>
 
     <main>
-        <section id="servicos">
-            <h2>Serviços</h2>
 
-            <div class="cards">
-                <div class="card">
-                    <h3>Landing Page</h3>
-                    <p>Página única e objetiva para divulgar seu negócio e atrair clientes.</p>
-                    <div class="preco">
-                        <span class="preco-gcreate">GC Create: a partir de R$ 150,00</span>
-                        <span class="preco-mercado">Mercado: R$ 500,00 - R$ 1.500,00</span>
-                    </div>
-                    <a href="Demos/glowskin/index.html" target="_blank" class="btn-exemplo">Exemplo 1</a>
-                    <a href="Demos/Impact Sound/index.html" target="_blank" class="btn-exemplo">Exemplo 2</a>
+    <section id="servicos">
+
+        <h2>Serviços</h2>
+
+        <div class="cards">
+
+            <!-- LANDING PAGE -->
+            <div class="card">
+                <h3>Landing Page</h3>
+
+                <p>
+                    Página única e objetiva para divulgar seu negócio
+                    e atrair clientes.
+                </p>
+
+                <div class="preco">
+                    <span class="preco-gcreate">
+                        GC Create: a partir de R$ 150,00
+                    </span>
+
+                    <span class="preco-mercado">
+                        Mercado: R$ 500,00 - R$ 1.500,00
+                    </span>
                 </div>
 
+                <a href="#portfolio" class="btn-exemplo">
+                    Ver exemplos
+                </a>
+            </div>
+
+            <!-- SITE INSTITUCIONAL -->
             <div class="card">
                 <h3>Site Institucional</h3>
-                <p>Site completo para apresentar sua empresa com profissionalismo.</p>
+
+                <p>
+                    Site completo para apresentar sua empresa
+                    com profissionalismo.
+                </p>
+
                 <div class="preco">
-                    <span class="preco-gcreate">GC Create: a partir de R$ 250,00</span>
-                    <span class="preco-mercado">Mercado: R$ 800,00 - R$ 3.000,00</span>
+                    <span class="preco-gcreate">
+                        GC Create: a partir de R$ 250,00
+                    </span>
+
+                    <span class="preco-mercado">
+                        Mercado: R$ 800,00 - R$ 3.000,00
+                    </span>
                 </div>
-                <a href="Demos/terraforce/index.html" target="_blank" class="btn-exemplo">Exemplo 1</a>
-                <a href="Demos/sacservice/index.html" target="_blank" class="btn-exemplo">Exemplo 2</a>
+
+                <a href="#portfolio" class="btn-exemplo">
+                    Ver exemplos
+                </a>
             </div>
 
+            <!-- PORTFÓLIO -->
             <div class="card">
                 <h3>Site para Portfólio</h3>
-                <p>Mostre seus trabalhos de forma elegante e profissional.</p>
+
+                <p>
+                    Mostre seus trabalhos de forma elegante
+                    e profissional.
+                </p>
+
                 <div class="preco">
-                    <span class="preco-gcreate">GC Create: a partir de R$ 200,00</span>
-                    <span class="preco-mercado">Mercado: R$ 600,00 - R$ 2.000,00</span>
+                    <span class="preco-gcreate">
+                        GC Create: a partir de R$ 200,00
+                    </span>
+
+                    <span class="preco-mercado">
+                        Mercado: R$ 600,00 - R$ 2.000,00
+                    </span>
                 </div>
-                <a href="Demos/designer/index.html" target="_blank" class="btn-exemplo">Ver Exemplo</a>
+
+                <a href="#portfolio" class="btn-exemplo">
+                    Ver exemplos
+                </a>
             </div>
+
         </div>
+
     </section>
-    </main>
+
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="portfolio-projetos">
+
+        <div class="portfolio-titulo">
+
+            <span>PROJETOS</span>
+
+            <h2>Conheça alguns dos nossos projetos</h2>
+
+            <p>
+                Sites criados para diferentes tipos de negócios.
+            </p>
+
+        </div>
+
+
+        <!-- FILTROS -->
+        <div class="filtros">
+
+            <button class="filtro-btn ativo" data-filtro="todos">
+                Todos
+            </button>
+
+            <button class="filtro-btn" data-filtro="barbearia">
+                💈 Barbearia
+            </button>
+
+            <button class="filtro-btn" data-filtro="seguranca">
+                🛡️ Segurança
+            </button>
+
+            <button class="filtro-btn" data-filtro="landing">
+                🚀 Landing Page
+            </button>
+
+        </div>
+
+
+        <!-- PROJETOS -->
+        <div class="projetos-grid">
+
+            <!-- BARBER HOUSE -->
+            <article class="projeto-card" data-categoria="barbearia">
+
+                <div class="projeto-imagem">
+                    <img src="Demos/barberhouse/imagens/logo.png"
+                         alt="Barber House">
+                </div>
+
+                <div class="projeto-info">
+
+                    <span>💈 Barbearia</span>
+
+                    <h3>Barber House</h3>
+
+                    <p>
+                        Site moderno para uma barbearia, com serviços,
+                        galeria e agendamento pelo WhatsApp.
+                    </p>
+
+                    <a href="Demos/barberhouse/index.html"
+                       target="_blank"
+                       class="btn-projeto">
+
+                        Ver projeto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SAC SERVICE -->
+            <article class="projeto-card" data-categoria="seguranca">
+
+                <div class="projeto-imagem">
+                    <img src="Demos/sacservice/imagens/logo.png"
+                         alt="SAC Service">
+                </div>
+
+                <div class="projeto-info">
+
+                    <span>🛡️ Segurança</span>
+
+                    <h3>SAC Service</h3>
+
+                    <p>
+                        Site institucional para empresa especializada
+                        em soluções e serviços de segurança.
+                    </p>
+
+                    <a href="Demos/sacservice/index.html"
+                       target="_blank"
+                       class="btn-projeto">
+
+                        Ver projeto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- GLOWSKIN -->
+            <article class="projeto-card" data-categoria="landing">
+
+                <div class="projeto-imagem">
+                    <img src="Demos/glowskin/imagens/logo.jpg"
+                         alt="GlowSkin">
+                </div>
+
+                <div class="projeto-info">
+
+                    <span>🚀 Landing Page</span>
+
+                    <h3>GlowSkin</h3>
+
+                    <p>
+                        Landing page moderna desenvolvida para
+                        apresentação de uma marca de skincare.
+                    </p>
+
+                    <a href="Demos/glowskin/index.html"
+                       target="_blank"
+                       class="btn-projeto">
+
+                        Ver projeto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMPACT SOUND -->
+            <article class="projeto-card" data-categoria="landing">
+
+                <div class="projeto-imagem">
+                    <img src="Demos/Impact Sound/imagens/logo.png"
+                         alt="Impact Sound">
+                </div>
+
+                <div class="projeto-info">
+
+                    <span>🚀 Landing Page</span>
+
+                    <h3>Impact Sound</h3>
+
+                    <p>
+                        Landing page criada para apresentação
+                        de uma marca e seus serviços.
+                    </p>
+
+                    <a href="Demos/Impact Sound/index.html"
+                       target="_blank"
+                       class="btn-projeto">
+
+                        Ver projeto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="projeto-card" data-categoria="landing">
+
+                <div class="projeto-imagem">
+                    <img src="Demos/terraforce/imagens/logo.png"
+                         alt="TerraForce">
+                </div>
+
+                <div class="projeto-info">
+
+                    <span>🚜 Institucional</span>
+
+                    <h3>TerraForce</h3>
+
+                    <p>
+                        Site institucional moderno desenvolvido para
+                        apresentar os serviços e fortalecer a presença
+                        digital da TerraForce.
+                    </p>
+
+                    <a href="Demos/terraforce/imagens/logo.png"
+                       target="_blank"
+                       class="btn-projeto">
+
+                        Ver projeto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="projeto-card" data-categoria="landing">
+
+                <div class="projeto-imagem">
+                    <img src="Demos/designer/imagens/logo.png"
+                         alt="Arthur Valen">
+                </div>
+
+                <div class="projeto-info">
+
+                    <span>🧔🏻 Portfólio</span>
+
+                    <h3>Arthur Valen</h3>
+
+                    <p>
+                        Site portfólio moderno desenvolvido para apresentar
+                        trabalhos, projetos e fortalecer a presença profissional
+                        do designer Arthur Valen.
+                    </p>
+
+                    <a href="Demos/designer/imagens/logo.png"
+                       target="_blank"
+                       class="btn-projeto">
+
+                        Ver projeto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
 
     <footer>
         <p>&copy; 2026 GCreate. Todos os direitos reservados.</p>
