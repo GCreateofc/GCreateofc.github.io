@@ -1013,15 +1013,15 @@ footer {
 }
 
 
-/* TABLET */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 850px) {
 
     .header {
         min-height: 75px;
-
         padding: 0 5%;
-
         gap: 18px;
     }
 
@@ -1039,13 +1039,11 @@ footer {
 
     .btn-header {
         padding: 9px 13px;
-
         font-size: 12px;
     }
 
     .pagina-hero {
         min-height: 390px;
-
         padding: 70px 5%;
     }
 
@@ -1056,7 +1054,6 @@ footer {
 
     .localizacao-conteudo {
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
@@ -1066,24 +1063,36 @@ footer {
 }
 
 
-/* CELULAR */
+/* =====================================================
+   CELULAR
+===================================================== */
 
 @media (max-width: 650px) {
 
     .header {
         min-height: 70px;
+        padding: 0 20px;
+        gap: 18px;
 
-        padding: 0 4%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
 
-        gap: 10px;
+    .logo {
+        flex-shrink: 0;
     }
 
     .logo img {
         width: 115px;
     }
 
+    .menu {
+        flex-shrink: 0;
+    }
+
     .menu ul {
-        gap: 12px;
+        gap: 16px;
+        white-space: nowrap;
     }
 
     .menu a {
@@ -1091,7 +1100,9 @@ footer {
     }
 
     .btn-header {
-        padding: 8px 10px;
+        flex-shrink: 0;
+
+        padding: 9px 13px;
 
         font-size: 10px;
     }
@@ -1102,7 +1113,6 @@ footer {
 
     .pagina-hero {
         min-height: 340px;
-
         padding: 60px 5%;
     }
 
@@ -1133,7 +1143,6 @@ footer {
 
     .cta-botoes {
         flex-direction: column;
-
         width: 100%;
     }
 
@@ -1144,24 +1153,25 @@ footer {
 
     .footer-conteudo {
         grid-template-columns: 1fr;
-
         gap: 35px;
     }
 
     .footer-bottom p {
         justify-content: center;
-
         text-align: center;
     }
 }
 
 
-/* CELULAR PEQUENO */
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
 
 @media (max-width: 480px) {
 
     .header {
-        padding: 0 3%;
+        padding: 0 15px;
+        gap: 15px;
     }
 
     .logo img {
@@ -1169,21 +1179,15 @@ footer {
     }
 
     .menu ul {
-        gap: 9px;
+        gap: 13px;
     }
 
     .menu a {
         font-size: 10px;
     }
 
-    .menu li:nth-child(1),
-    .menu li:nth-child(2) {
-        display: none;
-    }
-
     .btn-header {
-        padding: 8px 9px;
-
+        padding: 8px 10px;
         font-size: 9px;
     }
 
