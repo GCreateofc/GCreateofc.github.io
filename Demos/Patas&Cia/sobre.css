@@ -1,0 +1,1221 @@
+.sobre-hero {
+    position: relative;
+    min-height: 560px;
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--verde-claro);
+}
+
+.sobre-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -250px;
+    right: -150px;
+    border-radius: 50%;
+    background: rgba(49, 95, 80, 0.07);
+}
+
+.sobre-hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: -170px;
+    left: -100px;
+    border-radius: 50%;
+    background: rgba(232, 144, 61, 0.08);
+}
+
+.sobre-hero-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.sobre-hero-conteudo {
+    max-width: 600px;
+}
+
+.sobre-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.sobre-hero-tag i {
+    color: var(--laranja);
+    font-size: 15px;
+}
+
+.sobre-hero h1 {
+    margin-bottom: 25px;
+    color: var(--verde-escuro);
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -2px;
+}
+
+.sobre-hero h1 strong {
+    display: block;
+    color: var(--verde);
+}
+
+.sobre-hero-conteudo > p {
+    max-width: 540px;
+    margin-bottom: 32px;
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.sobre-hero-botoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sobre-hero-botoes .btn-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre-hero-botoes .btn-principal i {
+    transition: transform 0.3s ease;
+}
+
+.sobre-hero-botoes .btn-principal:hover i {
+    transform: translateY(4px);
+}
+
+
+/* =========================================================
+   ELEMENTOS DECORATIVOS DO HERO
+   ========================================================= */
+
+.sobre-hero-pata {
+    position: absolute;
+    z-index: 1;
+    color: rgba(49, 95, 80, 0.08);
+    pointer-events: none;
+}
+
+.sobre-hero-pata i {
+    font-size: 70px;
+}
+
+.sobre-hero-pata-1 {
+    top: 80px;
+    left: 5%;
+    transform: rotate(-18deg);
+}
+
+.sobre-hero-pata-2 {
+    bottom: 55px;
+    left: 42%;
+    transform: rotate(20deg);
+}
+
+.sobre-hero-pata-2 i {
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   IMAGEM DO HERO
+   ========================================================= */
+
+.sobre-hero-visual {
+    position: relative;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-hero-circulo {
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    background: var(--laranja);
+    opacity: 0.9;
+}
+
+.sobre-hero-imagem {
+    position: relative;
+    z-index: 2;
+    width: 380px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 190px 190px 25px 25px;
+    box-shadow: var(--sombra);
+}
+
+.sobre-hero-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-hero-card {
+    position: absolute;
+    right: 5px;
+    bottom: 25px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 280px;
+    padding: 17px 20px;
+    background: var(--branco);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.sobre-hero-card-icone {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--laranja-claro);
+    color: var(--laranja);
+    border-radius: 50%;
+    font-size: 19px;
+}
+
+.sobre-hero-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--verde-escuro);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.sobre-hero-card span {
+    display: block;
+    color: var(--cinza);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   NOSSA HISTÓRIA
+   ========================================================= */
+
+.historia {
+    padding: 115px 0;
+    background: var(--creme);
+}
+
+.historia-container {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 85px;
+}
+
+.historia-imagem {
+    position: relative;
+    min-height: 560px;
+}
+
+.historia-imagem > img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+}
+
+.historia-detalhe {
+    position: absolute;
+    right: -35px;
+    bottom: 35px;
+    width: 245px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--verde);
+    color: var(--branco);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.historia-detalhe i {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--laranja);
+    border-radius: 50%;
+    font-size: 19px;
+}
+
+.historia-detalhe span {
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.historia-detalhe strong {
+    display: block;
+    color: var(--laranja);
+    font-size: 15px;
+}
+
+.historia-conteudo {
+    max-width: 620px;
+}
+
+.secao-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.historia-conteudo h2,
+.jeito-conteudo h2 {
+    margin-bottom: 25px;
+    color: var(--verde-escuro);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.historia-conteudo h2 strong,
+.jeito-conteudo h2 strong {
+    color: var(--verde);
+}
+
+.historia-conteudo > p {
+    margin-bottom: 17px;
+    color: var(--cinza);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LISTA DA HISTÓRIA
+   ========================================================= */
+
+.historia-lista {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.historia-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.historia-item-icone {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--verde-claro);
+    color: var(--verde);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.historia-item strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--verde-escuro);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.historia-item span {
+    display: block;
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MISSÃO, VISÃO E VALORES
+   ========================================================= */
+
+.mvv {
+    padding: 110px 0;
+    background: var(--bege);
+}
+
+.mvv .secao-cabecalho {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.mvv .secao-cabecalho > span,
+.sobre-diferenciais .secao-cabecalho > span {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.mvv .secao-cabecalho h2,
+.sobre-diferenciais .secao-cabecalho h2 {
+    margin-bottom: 17px;
+    color: var(--verde-escuro);
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 900;
+    line-height: 1.12;
+}
+
+.mvv .secao-cabecalho h2 strong,
+.sobre-diferenciais .secao-cabecalho h2 strong {
+    color: var(--verde);
+}
+
+.mvv .secao-cabecalho p,
+.sobre-diferenciais .secao-cabecalho p {
+    color: var(--cinza);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.mvv-card {
+    position: relative;
+    padding: 38px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transicao);
+}
+
+.mvv-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--sombra);
+}
+
+.mvv-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--verde);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.mvv-card:hover::before {
+    transform: scaleX(1);
+}
+
+.mvv-destaque {
+    background: var(--verde);
+    border-color: var(--verde);
+    color: var(--branco);
+}
+
+.mvv-destaque::before {
+    background: var(--laranja);
+}
+
+.mvv-icone {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--verde-claro);
+    color: var(--verde);
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+.mvv-destaque .mvv-icone {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--laranja);
+}
+
+.mvv-tag {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--laranja);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.6px;
+}
+
+.mvv-destaque .mvv-tag {
+    color: var(--laranja);
+}
+
+.mvv-card h3 {
+    margin-bottom: 15px;
+    color: var(--verde-escuro);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.mvv-destaque h3 {
+    color: var(--branco);
+}
+
+.mvv-card p {
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.mvv-destaque p {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+
+/* =========================================================
+   NOSSO JEITO DE CUIDAR
+   ========================================================= */
+
+.jeito {
+    padding: 115px 0;
+    background: var(--creme);
+}
+
+.jeito-container {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 85px;
+}
+
+.jeito-conteudo {
+    max-width: 590px;
+}
+
+.jeito-conteudo > p {
+    margin-bottom: 32px;
+    color: var(--cinza);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.jeito-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.jeito-item {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 17px;
+    align-items: start;
+}
+
+.jeito-numero {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--verde-claro);
+    color: var(--verde);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.jeito-item h3 {
+    margin: 0 0 6px;
+    color: var(--verde-escuro);
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.jeito-item p {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.jeito-visual {
+    position: relative;
+    min-height: 560px;
+}
+
+.jeito-imagem-principal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.jeito-imagem-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jeito-imagem-secundaria {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 53%;
+    height: 230px;
+    overflow: hidden;
+    border: 8px solid var(--branco);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+}
+
+.jeito-selo {
+    position: absolute;
+    right: 5px;
+    bottom: 55px;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--laranja);
+    color: var(--verde-escuro);
+    border-radius: 50%;
+    transform: rotate(7deg);
+    box-shadow: var(--sombra);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.jeito-selo i {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.jeito-selo strong {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.jeito-selo span {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sobre-diferenciais {
+    padding: 110px 0;
+    background: var(--verde-claro);
+}
+
+.sobre-diferenciais .secao-cabecalho {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.sobre-diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.sobre-diferencial {
+    padding: 32px 25px;
+    background: var(--branco);
+    border: 1px solid rgba(49, 95, 80, 0.08);
+    border-radius: 14px;
+    transition: var(--transicao);
+}
+
+.sobre-diferencial:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra);
+}
+
+.sobre-diferencial-icone {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--laranja-claro);
+    color: var(--laranja);
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+.sobre-diferencial p {
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+
+    .sobre-hero-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .sobre-hero-conteudo {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .sobre-hero-conteudo > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sobre-hero-botoes {
+        justify-content: center;
+    }
+
+    .sobre-hero-visual {
+        min-height: 440px;
+    }
+
+    .historia-container,
+    .jeito-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .historia-conteudo,
+    .jeito-conteudo {
+        max-width: 750px;
+    }
+
+    .historia-imagem {
+        max-width: 650px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .jeito-visual {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mvv-card {
+        padding: 32px;
+    }
+
+    .sobre-diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET MENOR
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .sobre-hero {
+        min-height: auto;
+        padding: 75px 0 85px;
+    }
+
+    .sobre-hero h1 {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+    }
+
+    .sobre-hero-visual {
+        min-height: 410px;
+    }
+
+    .sobre-hero-circulo {
+        width: 320px;
+        height: 320px;
+    }
+
+    .sobre-hero-imagem {
+        width: 310px;
+        height: 370px;
+    }
+
+    .sobre-hero-card {
+        right: 10px;
+        bottom: 15px;
+    }
+
+    .historia,
+    .jeito {
+        padding: 85px 0;
+    }
+
+    .mvv,
+    .sobre-diferenciais {
+        padding: 85px 0;
+    }
+
+    .historia-imagem,
+    .historia-imagem > img {
+        min-height: 480px;
+        height: 480px;
+    }
+
+    .historia-detalhe {
+        right: 15px;
+    }
+
+    .jeito-visual {
+        min-height: 500px;
+    }
+
+    .jeito-imagem-principal {
+        height: 380px;
+    }
+
+    .jeito-imagem-secundaria {
+        height: 210px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .sobre-hero {
+        padding: 65px 0 70px;
+    }
+
+    .sobre-hero h1 {
+        font-size: 37px;
+        letter-spacing: -1px;
+    }
+
+    .sobre-hero-conteudo > p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .sobre-hero-botoes {
+        width: 100%;
+    }
+
+    .sobre-hero-botoes .btn-principal {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sobre-hero-visual {
+        min-height: 365px;
+    }
+
+    .sobre-hero-circulo {
+        width: 270px;
+        height: 270px;
+    }
+
+    .sobre-hero-imagem {
+        width: 260px;
+        height: 315px;
+        border-radius: 130px 130px 20px 20px;
+    }
+
+    .sobre-hero-card {
+        right: 0;
+        bottom: 5px;
+        max-width: 230px;
+        padding: 12px 14px;
+    }
+
+    .sobre-hero-card-icone {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .sobre-hero-card strong {
+        font-size: 12px;
+    }
+
+    .sobre-hero-card span {
+        font-size: 10px;
+    }
+
+    .sobre-hero-pata-1 {
+        left: 2%;
+        top: 50px;
+    }
+
+    .sobre-hero-pata-1 i {
+        font-size: 45px;
+    }
+
+    .sobre-hero-pata-2 {
+        display: none;
+    }
+
+
+    /* História */
+
+    .historia,
+    .jeito {
+        padding: 70px 0;
+    }
+
+    .historia-container,
+    .jeito-container {
+        gap: 45px;
+    }
+
+    .historia-imagem,
+    .historia-imagem > img {
+        min-height: 390px;
+        height: 390px;
+    }
+
+    .historia-detalhe {
+        right: 10px;
+        bottom: 15px;
+        width: 220px;
+        padding: 14px;
+    }
+
+    .historia-detalhe i {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .historia-detalhe span {
+        font-size: 11px;
+    }
+
+    .historia-detalhe strong {
+        font-size: 13px;
+    }
+
+    .historia-conteudo h2,
+    .jeito-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .historia-conteudo > p {
+        font-size: 14px;
+    }
+
+    .historia-lista {
+        gap: 15px;
+    }
+
+    .historia-item-icone {
+        width: 43px;
+        height: 43px;
+        font-size: 16px;
+    }
+
+    .historia-item strong {
+        font-size: 13px;
+    }
+
+    .historia-item span {
+        font-size: 11px;
+    }
+
+
+    /* Missão, visão e valores */
+
+    .mvv,
+    .sobre-diferenciais {
+        padding: 70px 0;
+    }
+
+    .mvv .secao-cabecalho,
+    .sobre-diferenciais .secao-cabecalho {
+        margin-bottom: 35px;
+    }
+
+    .mvv .secao-cabecalho h2,
+    .sobre-diferenciais .secao-cabecalho h2 {
+        font-size: 31px;
+    }
+
+    .mvv .secao-cabecalho p,
+    .sobre-diferenciais .secao-cabecalho p {
+        font-size: 14px;
+    }
+
+    .mvv-grid {
+        gap: 15px;
+    }
+
+    .mvv-card {
+        padding: 28px 24px;
+    }
+
+    .mvv-icone {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .mvv-card h3 {
+        font-size: 21px;
+    }
+
+    .mvv-card p {
+        font-size: 13px;
+    }
+
+
+    /* Jeito de cuidar */
+
+    .jeito-visual {
+        min-height: 390px;
+    }
+
+    .jeito-imagem-principal {
+        width: 78%;
+        height: 300px;
+        border-radius: 15px;
+    }
+
+    .jeito-imagem-secundaria {
+        width: 57%;
+        height: 175px;
+        border-width: 5px;
+        border-radius: 12px;
+    }
+
+    .jeito-selo {
+        right: 0;
+        bottom: 25px;
+        width: 95px;
+        height: 95px;
+    }
+
+    .jeito-selo i {
+        font-size: 16px;
+    }
+
+    .jeito-selo strong {
+        font-size: 15px;
+    }
+
+    .jeito-selo span {
+        font-size: 8px;
+    }
+
+    .jeito-item {
+        grid-template-columns: 45px 1fr;
+        gap: 13px;
+    }
+
+    .jeito-numero {
+        width: 45px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .jeito-item h3 {
+        font-size: 15px;
+    }
+
+    .jeito-item p {
+        font-size: 12px;
+    }
+
+
+    /* Diferenciais */
+
+    .sobre-diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sobre-diferencial {
+        padding: 25px 22px;
+    }
+
+    .sobre-diferencial-icone {
+        width: 47px;
+        height: 47px;
+        margin-bottom: 17px;
+    }
+
+    .sobre-diferencial h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .sobre-hero h1 {
+        font-size: 33px;
+    }
+
+    .sobre-hero-imagem {
+        width: 235px;
+        height: 290px;
+    }
+
+    .sobre-hero-circulo {
+        width: 245px;
+        height: 245px;
+    }
+
+    .sobre-hero-card {
+        max-width: 205px;
+    }
+
+    .historia-imagem,
+    .historia-imagem > img {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .historia-detalhe {
+        width: 195px;
+    }
+
+    .historia-conteudo h2,
+    .jeito-conteudo h2 {
+        font-size: 29px;
+    }
+
+    .jeito-visual {
+        min-height: 350px;
+    }
+
+    .jeito-imagem-principal {
+        height: 265px;
+    }
+
+    .jeito-imagem-secundaria {
+        height: 150px;
+    }
+
+    .jeito-selo {
+        width: 82px;
+        height: 82px;
+    }
+}
+
+
+/* ANIMAÇÕES ESPECÍFICAS - SOBRE NÓS */
+
+.mvv-card,
+.sobre-diferencial {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .mvv-card:hover,
+    .sobre-diferencial:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+}
+
+/* Movimento sutil nas imagens */
+
+.historia-imagem img,
+.sobre-hero-imagem img,
+.jeito-imagem-principal img,
+.jeito-imagem-secundaria img {
+    transition: transform 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .historia-imagem:hover img,
+    .sobre-hero-imagem:hover img,
+    .jeito-imagem-principal:hover img,
+    .jeito-imagem-secundaria:hover img {
+        transform: scale(1.035);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mvv-card,
+    .sobre-diferencial,
+    .historia-imagem img,
+    .sobre-hero-imagem img,
+    .jeito-imagem-principal img,
+    .jeito-imagem-secundaria img {
+        transition: none !important;
+    }
+
+    .mvv-card:hover,
+    .sobre-diferencial:hover {
+        transform: none;
+    }
+
+    .historia-imagem:hover img,
+    .sobre-hero-imagem:hover img,
+    .jeito-imagem-principal:hover img,
+    .jeito-imagem-secundaria:hover img {
+        transform: none;
+    }
+}

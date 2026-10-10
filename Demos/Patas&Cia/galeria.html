@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Patas & Cia Pet Shop</title>
+    <meta name="description" content="Confira momentos, pets e o ambiente da Patas & Cia Pet Shop em nossa galeria.">
+    <meta name="author" content="Patas & Cia Pet Shop">
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.png" alt="Patas & Cia Pet Shop">
+            </a>
+
+            <nav class="menu" id="menu">
+
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="galeria.html" class="ativo">Galeria</a>
+                <a href="contato.html" >Contato</a>
+
+                <a
+                    href="https://wa.me/5511999999999"
+                    target="_blank"
+                    class="btn-header"
+                    >
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Agendar</span>
+                </a>
+            </nav>
+
+            <button
+                class="menu-mobile"
+                id="menuMobile"
+                aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="galeria-hero">
+
+            <div class="galeria-hero-pata pata-1">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="galeria-hero-pata pata-2">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="container galeria-hero-container">
+
+                <div class="galeria-hero-conteudo">
+
+                    <span class="secao-tag animar-inicio">
+                        NOSSA GALERIA
+                    </span>
+
+                    <h1 class="animar-inicio atraso-1">
+                        Momentos que
+                        <strong>merecem ser lembrados.</strong>
+                    </h1>
+
+                    <p class="animar-inicio atraso-2">
+                        Um pouco de carinho, da alegria e dos momentos
+                        especiais que fazem parte da rotina da
+                        Patas & Cia.
+                    </p>
+
+                    <div class="galeria-hero-botoes animar-inicio atraso-3">
+
+                        <a href="#galeria" class="btn btn-principal">
+                            <i class="fa-solid fa-images"></i>
+                            Ver Galeria
+                        </a>
+
+                        <a href="contato.html" class="btn btn-secundario">
+                            <i class="fa-solid fa-message"></i>
+                            Fale Conosco
+                        </a>
+                    </div>
+                </div>
+
+                <div class="galeria-hero-visual animar-inicio atraso-2">
+
+                    <div class="galeria-hero-circulo"></div>
+
+                    <div class="galeria-hero-imagem">
+
+                        <img src="imagens/produtos-hero.png" alt="Cachorro e gato juntos em um ambiente pet">
+                    </div>
+
+                    <div class="galeria-hero-card">
+                        <i class="fa-solid fa-heart"></i>
+
+                        <div>
+
+                            <strong>
+                                Amor em cada momento
+                            </strong>
+
+                            <span>
+                                Cuidado que deixa boas lembranças.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria-intro">
+
+            <div class="container galeria-intro-container">
+
+                <div class="galeria-intro-texto revelar">
+
+                    <span class="secao-tag">
+                        MOMENTOS ESPECIAIS
+                    </span>
+
+                    <h2>
+                        Porque cada pet tem
+                        <strong>uma história única.</strong>
+                    </h2>
+                </div>
+
+                <div class="galeria-intro-descricao revelar">
+
+                    <p>
+                        Nossa galeria reúne imagens que representam
+                        um pouco do universo da Patas & Cia:
+                        pets, carinho, diversão e momentos
+                        especiais.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria-principal" id="galeria">
+
+            <div class="container">
+
+                <div class="secao-cabecalho centralizado revelar">
+
+                    <span class="secao-tag">
+                        CONFIRA
+                    </span>
+
+                    <h2>
+                        Um pouco do nosso
+                        <strong>universo.</strong>
+                    </h2>
+
+                    <p>
+                        Confira alguns momentos que representam
+                        o carinho e a alegria presentes na
+                        Patas & Cia.
+                    </p>
+                </div>
+
+                <div class="galeria-grid">
+
+                    <article class="galeria-item galeria-item-grande revelar">
+
+                        <img src="imagens/galeria-01.png" alt="Cachorro em ambiente pet">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-paw"></i>
+                                Momentos especiais
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item revelar">
+
+                        <img src="imagens/galeria-02.png" alt="Cão durante momento de cuidado">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-heart"></i>
+                                Carinho
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item revelar">
+
+                        <img src="imagens/galeria-03.png" alt="Gato em ambiente confortável">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-cat"></i>
+                                Nossos pets
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item galeria-item-largo revelar">
+
+                        <img src="imagens/galeria-04.png" alt="Cães juntos em um ambiente externo">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-dog"></i>
+                                Diversão
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item revelar">
+
+                        <img src="imagens/galeria-05.jpg" alt="Cachorro sorrindo">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-face-smile"></i>
+                                Alegria
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item revelar">
+
+                        <img src="imagens/galeria-06.jpg" alt="Gato em ambiente interno">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-cat"></i>
+                                Bem-estar
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item revelar">
+
+                        <img src="imagens/galeria-07.jpg" alt="Cachorro em momento descontraído">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-paw"></i>
+                                Companheiros
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="galeria-item galeria-item-grande revelar">
+
+                        <img src="imagens/galeria-08.jpg" alt="Cães juntos em um momento de interação">
+
+                        <div class="galeria-overlay">
+
+                            <span>
+                                <i class="fa-solid fa-people-group"></i>
+                                Amizade
+                            </span>
+
+                            <button
+                                class="galeria-zoom"
+                                aria-label="Ampliar imagem">
+
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria-frase">
+
+            <div class="container">
+
+                <div class="galeria-frase-conteudo">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    <h2>
+                        Mais do que cuidar,
+                        <strong>criamos momentos.</strong>
+                    </h2>
+
+                    <p>
+                        Porque sabemos que nossos pets fazem parte
+                        da família e cada momento do lado deles
+                        merece ser especial.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria-cta">
+
+            <div class="galeria-cta-patas">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="container">
+
+                <div class="galeria-cta-conteudo">
+
+                    <span class="secao-tag">
+                        FAÇA PARTE
+                    </span>
+
+                    <h2>
+                        Quer proporcionar
+                        <strong>momentos especiais?</strong>
+                    </h2>
+
+                    <p>
+                        Entre em contato com a Patas & Cia
+                        e conheça nossos serviços.
+                    </p>
+
+                    <a href="servicos.html" class="btn btn-branco">
+                        Conhecer nossos serviços
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-coluna footer-marca">
+                <a href="index.html" class="logo">
+                    <img src="imagens/logo.png" alt="Patas & Cia Pet Shop">
+                </a>
+
+                <p>
+                    Cuidado, carinho e confiança para quem
+                    faz parte da sua família.
+                </p>
+
+                <div class="footer-redes">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a 
+                        href="https://wa.me/5511999999999"
+                        target="_blank"
+                        aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-coluna footer-contato">
+
+                <h3>
+                    Fale conosco
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    São Paulo - SP
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    Atendimento com horário agendado
+                </p>
+
+                <a 
+                    href="https://wa.me/5511999999999"
+                    target="_blank"
+                    aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Falar pelo WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-container">
+
+                <p>
+                    © 2026 Patas & Cia Pet Shop.
+                    Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Desenvolvido por
+                    <a href="https://www.gccreate.com.br">
+                        GC Create
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button
+            class="lightbox-fechar"
+            id="lightboxFechar"
+            aria-label="Fechar imagem">
+        
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <button
+            class="lightbox-anterior"
+            id="lightboxAnterior"
+            aria-label="Imagem antrior">
+        
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <img id="lightboxImagem" src="" alt="Imagem ampliada">
+
+        <button
+            class="lightbox-proxima"
+            id="lightboxProxima"
+            aria-label="Próxima imagem">
+        
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <span class="lightbox-contador" id="lightboxContador"></span>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
