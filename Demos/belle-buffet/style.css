@@ -661,16 +661,26 @@ a:focus-visible {
     }
 }
 
+/* Botão do menu mobile (invisível no desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--creme);
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: var(--dourado);
+}
 
 /* =========================
    RESPONSIVIDADE
 ========================= */
 
 @media (max-width: 1000px) {
-    nav {
-        gap: 18px;
-    }
-
     nav a {
         font-size: 12px;
         letter-spacing: 0.5px;
@@ -691,19 +701,42 @@ a:focus-visible {
 
 @media (max-width: 760px) {
     .header-inner {
-        flex-direction: column;
-        gap: 18px;
-        padding: 16px 0 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
     }
 
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 20px;
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(14, 14, 14, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+    }
+
+    nav.nav-menu.ativo {
+        max-height: 450px;
+        opacity: 1;
+        padding: 30px 0;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .hero {
@@ -824,18 +857,6 @@ a:focus-visible {
         gap: 14px;
     }
 
-    nav {
-        gap: 12px 16px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    nav .btn-nav {
-        padding: 9px 12px;
-    }
-
     .hero-conteudo h1 {
         font-size: 35px;
     }
@@ -864,53 +885,5 @@ a:focus-visible {
 
     .contato-info span {
         font-size: 12px;
-    }
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--creme);
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.menu-toggle:hover {
-    color: var(--dourado);
-}
-
-@media (max-width: 760px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgba(14, 14, 14, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 30px 0;
-        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.3s ease;
-    }
-
-    .nav-menu.ativo {
-        max-height: 400px;
-        opacity: 1;
-    }
-
-    .header-inner {
-        flex-direction: row;
-        justify-content: space-between;
     }
 }
